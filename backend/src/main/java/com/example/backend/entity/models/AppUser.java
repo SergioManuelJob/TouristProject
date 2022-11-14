@@ -1,11 +1,13 @@
-package entity.models;
+package com.example.backend.entity.models;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-public class User implements Serializable {
+public class AppUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -18,10 +20,12 @@ public class User implements Serializable {
     private String email;
     private String image;
     private boolean role;
-    @OneToMany(mappedBy = "userId")
+    @JsonIgnore
+    @OneToMany(mappedBy = "appUserId")
     private List<Review> reviews;
 
-    public User(long id, String username, String password, String email, String image, Boolean role, List<Review> reviews) {
+    public AppUser(long id, String username, String password, String email, String image, Boolean role, List<Review> reviews) {
+        super();
         this.id = id;
         this.username = username;
         this.password = password;
@@ -31,7 +35,8 @@ public class User implements Serializable {
         this.reviews = reviews;
     }
 
-    public User() {
+    public AppUser() {
+        super();
     }
 
     public long getId() {

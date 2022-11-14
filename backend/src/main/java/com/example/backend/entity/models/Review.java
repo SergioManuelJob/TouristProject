@@ -1,6 +1,5 @@
-package entity.models;
+package com.example.backend.entity.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -19,22 +18,24 @@ public class Review implements Serializable {
     private String description;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Date time;
-    private boolean like;
+    private boolean liked;
     @ManyToOne
-    private User userId;
+    private AppUser appUserId;
     @ManyToOne
     private Place placeId;
 
-    public Review(long id, String description, Date time, boolean like, User userId, Place placeId) {
+    public Review(long id, String description, Date time, boolean like, AppUser appUserId, Place placeId) {
+        super();
         this.id = id;
         this.description = description;
         this.time = time;
-        this.like = like;
-        this.userId = userId;
+        this.liked = like;
+        this.appUserId = appUserId;
         this.placeId = placeId;
     }
 
     public Review() {
+        super();
     }
 
     public long getId() {
@@ -62,19 +63,19 @@ public class Review implements Serializable {
     }
 
     public boolean isLike() {
-        return like;
+        return liked;
     }
 
     public void setLike(boolean like) {
-        this.like = like;
+        this.liked = like;
     }
 
-    public User getUserId() {
-        return userId;
+    public AppUser getUserId() {
+        return appUserId;
     }
 
-    public void setUserId(User userId) {
-        this.userId = userId;
+    public void setUserId(AppUser appUserId) {
+        this.appUserId = appUserId;
     }
 
     public Place getPlaceId() {

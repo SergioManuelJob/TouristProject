@@ -1,9 +1,10 @@
-package entity.service;
+package com.example.backend.entity.service;
 
-import entity.models.Review;
+import com.example.backend.entity.models.Review;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public interface IReviewService {
     public List<Review> getAll();
     public Review getOne(long id);

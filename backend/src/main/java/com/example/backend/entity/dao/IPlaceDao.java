@@ -1,6 +1,6 @@
-package entity.dao;
+package com.example.backend.entity.dao;
 
-import entity.models.Place;
+import com.example.backend.entity.models.Place;
 import org.springframework.data.repository.CrudRepository;
 
 public interface IPlaceDao extends CrudRepository<Place, Long> {

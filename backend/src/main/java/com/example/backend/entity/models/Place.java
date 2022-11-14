@@ -1,4 +1,6 @@
-package entity.models;
+package com.example.backend.entity.models;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,10 +19,12 @@ public class Place implements Serializable {
     private String description;
     private String direction;
     private String image;
+    @JsonIgnore
     @OneToMany(mappedBy = "placeId")
     private List<Review> reviews;
 
     public Place(long id, String title, String description, String direction, String image, List<Review> reviews) {
+        super();
         this.id = id;
         this.title = title;
         this.description = description;
@@ -30,6 +34,7 @@ public class Place implements Serializable {
     }
 
     public Place() {
+        super();
     }
 
     public long getId() {

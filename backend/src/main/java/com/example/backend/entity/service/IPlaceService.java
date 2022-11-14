@@ -1,9 +1,9 @@
-package entity.service;
+package com.example.backend.entity.service;
 
-import entity.models.Place;
+import com.example.backend.entity.models.Place;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 public interface IPlaceService {
     public List< Place > getAll();
     public Place getOne(long id);
