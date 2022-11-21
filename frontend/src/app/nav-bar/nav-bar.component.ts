@@ -1,4 +1,6 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
+
+  constructor(private router: Router){
+
+  }
+
+  goLogIn(){
+    this.router.navigateByUrl("/register");
+  }  
 
 }
