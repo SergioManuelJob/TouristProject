@@ -27,9 +27,10 @@ public class FileController {
             fileName = this.fileService.uploadImage(path, image);
         }
         catch (Exception e){
-            System.out.println(e);
-            return new ResponseEntity<>(new FileResponse(fileName, "Image is not succesfully uploaded :("), HttpStatus.INTERNAL_SERVER_ERROR);
+            e.printStackTrace();
+            return new ResponseEntity<>(new FileResponse(null, "Image is not succesfully uploaded :("), HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return new ResponseEntity<>(new FileResponse(fileName, "Image is succesfully uploaded!"), HttpStatus.OK);
     }
+
 }

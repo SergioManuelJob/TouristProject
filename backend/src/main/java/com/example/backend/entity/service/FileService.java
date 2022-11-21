@@ -16,10 +16,10 @@ public class FileService implements IFileService{
         //File name
         String name = file.getOriginalFilename();
         //Fullpath
-        String filePath=path + File.separator + name;
+        String filePath = path + File.separator + name;
         //create folder if not created
         File f = new File(path);
-        if(f.exists()){
+        if(!f.exists()){
             f.mkdir();
         }
         //file copy
