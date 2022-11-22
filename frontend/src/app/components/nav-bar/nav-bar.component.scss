@@ -1,6 +1,8 @@
 div{
     background-color: #E26A2C;
     width:100%;
+    position: sticky;
+    top: 0;
 }
 
 #logo{
@@ -10,5 +12,5 @@ div{
 
 #profilePic{
     width:25%;  
-    margin-left: 45%; 
+    margin-left: 50%; 
 }

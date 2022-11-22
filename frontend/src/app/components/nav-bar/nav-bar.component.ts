@@ -14,7 +14,7 @@ export class NavBarComponent {
   }
 
   goLogIn(){
-    this.router.navigateByUrl("/register");
+    this.router.navigate(["/register"]);
   }  
 
 }

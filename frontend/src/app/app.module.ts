@@ -3,20 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { PlaceCardComponent } from './place-card/place-card.component';
-import { RegisterComponent } from './register/register.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { PlaceCardComponent } from './components/place-card/place-card.component';
+import { LogInPageComponent } from './pages/log-in-page/log-in-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { RouterOutlet } from '@angular/router';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { HelpPageComponent } from './pages/help-page/help-page.component';
+import { HelpCardComponent } from './components/help-card/help-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     PlaceCardComponent,
-    RegisterComponent,
+    LogInPageComponent,
+    HomePageComponent,
+    RegisterPageComponent,
+    HelpPageComponent,
+    HelpCardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterOutlet
   ],
   providers: [],
   bootstrap: [AppComponent]
