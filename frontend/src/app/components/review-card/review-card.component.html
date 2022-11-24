@@ -1,0 +1,5 @@
+<div id="container">
+    <p>{{place}}, {{date}}</p>
+    <div *ngIf="like else elseBlock" ><img id="like" src="../../../assets/images/like.png"></div>
+    <ng-template #elseBlock><img id="dislike" src="../../../assets/images/dislike.png"></ng-template>
+</div>

@@ -1,5 +1,5 @@
 img{
-    width: 15%;
+    width: 2.3em;
     margin:3%;
     margin-left:80%;
 }
@@ -15,14 +15,14 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2em;
+    padding: 1.5em;
 }
 
 form label{
     align-self: flex-start;
     color: white;
     font-weight: bold;
-    margin-top: 5%;
+    margin-top: 3%;
     padding: 0.5em;
     padding-left: -0.5em;
 }
@@ -30,11 +30,13 @@ form label{
 form h2{
     align-self: flex-start;
     font-size: 1.8em;
+    margin-bottom: 0.2em;
     color: white;
 }
 
 form input{
-    font-size:1.3em;
+    font-size:1.2em;
+    font-weight: bold;
     color: #686868;
     background-color: #D9D9D9;
     border: none;
@@ -53,10 +55,14 @@ form button{
     border: none;
     border-radius: 1em;
     margin-top:1em;
-    padding: 1em;
+    padding: 0.8em;
     font-size: 1.3em;
     font-weight: bold;
     color: black;
     background-color: #FFD07F;
     width: 60%;
+}
+
+form button:hover{
+    background-color: #E0B770;    
 }

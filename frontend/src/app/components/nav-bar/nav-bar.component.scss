@@ -1,16 +1,21 @@
 div{
     background-color: #E26A2C;
-    width:100%;
+    width:100vw;
     position: sticky;
     top: 0;
 }
-
+a{
+    height: 100%;
+    margin-left: 0.5em;
+}
 #logo{
-    width:20%;
-    margin-left: 5%;
+    width:4.5em;
+    height: 100%;
 }
 
 #profilePic{
-    width:25%;  
-    margin-left: 50%; 
+    margin-top:0.4em;
+    float: right;
+    width:5.2em;  
+    height: 100%;
 }

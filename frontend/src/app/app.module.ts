@@ -11,6 +11,8 @@ import { RouterOutlet } from '@angular/router';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { HelpPageComponent } from './pages/help-page/help-page.component';
 import { HelpCardComponent } from './components/help-card/help-card.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { ReviewCardComponent } from './components/review-card/review-card.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { HelpCardComponent } from './components/help-card/help-card.component';
     RegisterPageComponent,
     HelpPageComponent,
     HelpCardComponent,
+    ProfilePageComponent,
+    ReviewCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HelpPageComponent } from './pages/help-page/help-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LogInPageComponent } from './pages/log-in-page/log-in-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'help',
     component: HelpPageComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfilePageComponent,
   },
   {
     path: '',

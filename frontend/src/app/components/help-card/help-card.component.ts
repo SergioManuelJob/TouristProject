@@ -7,12 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 export class HelpCardComponent {
 
+  @Input()
   url: String;
+  @Input()
   text: String;
 
-  constructor(url: String, text: String){
-    this.url = url;
-    this.text = text;
+  constructor(){
+    this.url = ""
+    this.text = ""
   }
 
 }
