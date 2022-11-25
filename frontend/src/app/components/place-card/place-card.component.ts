@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-place-card',
@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./place-card.component.scss']
 })
 export class PlaceCardComponent {
+
+  @Input()
+  title: String;
+  @Input()
+  url: String;
+  @Input()
+  location: String;
+  @Input()
+  reviews: String;
+
+  constructor(){
+    this.title = ""
+    this.url = ""
+    this.location = ""
+    this.reviews = ""
+  }
 
 }

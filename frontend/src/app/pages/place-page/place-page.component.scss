@@ -1,0 +1,30 @@
+#containerDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 1em;
+}
+img{
+    border: solid 2px black;
+    width: 70%;
+}
+p{
+    font-weight: 100;
+    padding:1.5em;
+}
+hr{
+    width: 90%;
+    margin-left:1em;
+    border: solid 2px #E26A2C;
+}
+#Reviews{
+    font-weight: bold;
+    padding: 0;
+    padding-top: 1em;
+    padding-left:1em;
+    
+}

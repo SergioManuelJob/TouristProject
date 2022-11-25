@@ -7,11 +7,19 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LogInPageComponent } from './pages/log-in-page/log-in-page.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { InformationPageComponent } from './pages/information-page/information-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { PlacePageComponent } from './pages/place-page/place-page.component';
+import { ConfigurationPageComponent } from './pages/configuration-page/configuration-page.component';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomePageComponent,
+  },
+  {
+    path: 'place',
+    component: PlacePageComponent,
   },
   {
     path: 'logIn',
@@ -28,6 +36,18 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfilePageComponent,
+  },
+  {
+    path: 'information',
+    component: InformationPageComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactPageComponent,
+  },
+  {
+    path: 'configuration',
+    component: ConfigurationPageComponent,
   },
   {
     path: '',

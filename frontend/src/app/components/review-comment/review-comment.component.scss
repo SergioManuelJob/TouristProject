@@ -1,0 +1,42 @@
+#containerComment{
+    width: 80%;
+    background-color: white;
+    border: solid 1px black;
+    margin-left: 10%;
+    margin-top: 5%;
+    border-radius: 0.5em;
+}
+
+img{
+    padding: 0.2em;
+    width: 3em;
+}
+
+#topPart{
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+}
+
+#profilePic{
+    height: 100%;
+    width:4em;
+}
+
+h3{
+    padding:0.5em;
+}
+
+p{
+    padding: 0.5em;
+}
+
+#like{
+    margin-left: 2em;
+    background-color: #68FF92;
+}
+
+#dislike{
+    margin-left: 2em;
+    background-color: #FC7979;
+}
