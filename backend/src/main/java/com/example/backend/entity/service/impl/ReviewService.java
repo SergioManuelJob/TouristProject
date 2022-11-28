@@ -1,4 +1,4 @@
-package com.example.backend.entity.service;
+package com.example.backend.entity.service.impl;
 
 import com.example.backend.entity.dao.IReviewDao;
 import com.example.backend.entity.models.Review;

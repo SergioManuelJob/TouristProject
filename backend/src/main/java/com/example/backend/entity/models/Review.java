@@ -1,5 +1,8 @@
 package com.example.backend.entity.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -7,6 +10,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Review implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -24,18 +30,12 @@ public class Review implements Serializable {
     @ManyToOne
     private Place placeId;
 
-    public Review(long id, String description, Date time, boolean like, AppUser appUserId, Place placeId) {
+    public Review(long id, String description, Date time, boolean like) {
         super();
         this.id = id;
         this.description = description;
         this.time = time;
         this.liked = like;
-        this.appUserId = appUserId;
-        this.placeId = placeId;
-    }
-
-    public Review() {
-        super();
     }
 
     public long getId() {

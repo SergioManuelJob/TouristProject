@@ -24,7 +24,7 @@ public class AppUser implements Serializable {
     @OneToMany(mappedBy = "appUserId")
     private List<Review> reviews;
 
-    public AppUser(long id, String username, String password, String email, String image, Boolean role, List<Review> reviews) {
+    public AppUser(long id, String username, String password, String email, String image, Boolean role) {
         super();
         this.id = id;
         this.username = username;
@@ -32,7 +32,6 @@ public class AppUser implements Serializable {
         this.email = email;
         this.image = image;
         this.role = role;
-        this.reviews = reviews;
     }
 
     public AppUser() {

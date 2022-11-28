@@ -1,37 +1,39 @@
-package com.example.backend.entity.service;
+package com.example.backend.entity.service.impl;
 
 import com.example.backend.entity.dao.IUserDao;
 import com.example.backend.entity.models.AppUser;
+import com.example.backend.entity.models.User;
+import com.example.backend.entity.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class UserService implements IUserService{
+public class UserService implements IUserService {
 
     @Autowired
     private IUserDao userDao;
     @Override
-    public List<AppUser> getAll() {
-        return (List<AppUser>)userDao.findAll();
+    public List<User> getAll() {
+        return (List<User>)userDao.findAll();
     }
 
     @Override
-    public AppUser getOne(long id) {
+    public User getOne(long id) {
         return userDao.findById(id).get();
     }
 
     @Override
-    public void post(AppUser appUser) {
+    public void post(User appUser) {
         userDao.save(appUser);
     }
 
     @Override
-    public void put(AppUser appUser, long id) {
+    public void put(User user, long id) {
         userDao.findById(id).ifPresent((x)->{
-            appUser.setId(id);
-            userDao.save(appUser);
+            user.setId(id);
+            userDao.save(user);
         });
     }
 

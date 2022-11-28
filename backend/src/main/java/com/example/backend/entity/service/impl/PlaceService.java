@@ -1,4 +1,4 @@
-package com.example.backend.entity.service;
+package com.example.backend.entity.service.impl;
 
 import com.example.backend.entity.dao.IPlaceDao;
 import com.example.backend.entity.models.Place;
@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class PlaceService implements IPlaceService {
     @Autowired
-    private IPlaceDao placeDao;
+    private IPlaceDao;
     @Override
     public List<Place> getAll() {
         return (List<Place>)placeDao.findAll();

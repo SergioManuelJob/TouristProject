@@ -1,6 +1,7 @@
 package com.example.backend.controllers;
 
 import com.example.backend.entity.models.AppUser;
+import com.example.backend.entity.models.User;
 import com.example.backend.entity.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,23 +16,23 @@ public class UserController {
     IUserService userService;
 
     @GetMapping("/user")
-    public List<AppUser> getAll() {
+    public List<User> getAll() {
         return userService.getAll();
     }
 
     @GetMapping("/user/{id}")
-    public AppUser getOne(@PathVariable(value = "id")long id) {
+    public User getOne(@PathVariable(value = "id")long id) {
         return userService.getOne(id);
     }
 
     @PostMapping("/user")
-    public void post(AppUser appUser) {
-        userService.post(appUser);
+    public void post(User user) {
+        userService.post(user);
     }
 
     @PutMapping("/user/{id}")
-    public void put(AppUser appUser, @PathVariable(value = "id") long id) {
-        userService.put(appUser, id);
+    public void put(User user, @PathVariable(value = "id") long id) {
+        userService.put(user, id);
     }
 
     @DeleteMapping("/user/{id}")

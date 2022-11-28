@@ -23,14 +23,13 @@ public class Place implements Serializable {
     @OneToMany(mappedBy = "placeId")
     private List<Review> reviews;
 
-    public Place(long id, String title, String description, String direction, String image, List<Review> reviews) {
+    public Place(long id, String title, String description, String direction, String image) {
         super();
         this.id = id;
         this.title = title;
         this.description = description;
         this.direction = direction;
         this.image = image;
-        this.reviews = reviews;
     }
 
     public Place() {
