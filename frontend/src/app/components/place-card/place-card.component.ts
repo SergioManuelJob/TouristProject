@@ -13,14 +13,11 @@ export class PlaceCardComponent {
   url: String;
   @Input()
   location: String;
-  @Input()
-  reviews: String;
 
   constructor(){
     this.title = ""
     this.url = ""
     this.location = ""
-    this.reviews = ""
   }
 
 }

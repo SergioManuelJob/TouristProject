@@ -14,22 +14,18 @@
 }
 
 #containerPlace:hover{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-left: 6%;
-    margin-top: 5%;
-    margin-bottom: 5%;
     background-color: #EBEBEB;    
-    width: 80%;
     border: solid 4px black;
-    border-radius: 10px;
-    padding: 10px;
 }
 
 img{
     border: solid 2px black;
     width: 60%;
     border-radius: 10px;
+}
+
+p{
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }

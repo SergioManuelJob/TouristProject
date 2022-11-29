@@ -17,8 +17,12 @@ const routes: Routes = [
     path: 'home',
     component: HomePageComponent,
   },
+  // {
+  //   path: 'place',
+  //   component: PlacePageComponent,
+  // },
   {
-    path: 'place',
+    path: 'place:id',
     component: PlacePageComponent,
   },
   {

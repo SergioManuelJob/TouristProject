@@ -1,6 +1,55 @@
 <app-nav-bar></app-nav-bar>
-<app-place-card title="Roque Nublo" url="../../../assets/images/Roque_nublo.jpg" location="Gran Canaria, Tejeda" reviews="42" (click)="goToPlace()"></app-place-card>
-<app-place-card title="Roque Nublo" url="../../../assets/images/Roque_nublo.jpg" location="Gran Canaria, Tejeda" reviews="42" (click)="goToPlace()"></app-place-card>
-<app-place-card title="Roque Nublo" url="../../../assets/images/Roque_nublo.jpg" location="Gran Canaria, Tejeda" reviews="42" (click)="goToPlace()"></app-place-card>
-<app-place-card title="Roque Nublo" url="../../../assets/images/Roque_nublo.jpg" location="Gran Canaria, Tejeda" reviews="42" (click)="goToPlace()"></app-place-card>
-<app-place-card title="Roque Nublo" url="../../../assets/images/Roque_nublo.jpg" location="Gran Canaria, Tejeda" reviews="42" (click)="goToPlace()"></app-place-card>
+
+<div class="wrapper">
+    <div class="slider" id="slider">
+      <ul class="slides">
+        <li class="slide" id="slide1">
+          <a href="#">
+            <p class="caption">Roque Nublo</p>
+            <img src="../../../assets/images/Roque_nublo.jpg" alt="photo 1">
+          </a>
+        </li>
+        <li class="slide" id="slide2">
+          <a href="#">
+            <p class="caption">Maspalomas</p>
+            <img src="../../../assets/images/Maspalomas.jpg" alt="photo 2">
+          </a>
+        </li>
+        <li class="slide" id="slide3">
+          <a href="#">
+            <p class="caption">Telde</p>
+            <img src="../../../assets/images/Telde.jpg" alt="photo 3">
+          </a>
+        </li>
+        <li class="slide" id="slide4">
+          <a href="#">
+            <p class="caption">Teror</p>
+            <img src="../../../assets/images/Teror.jpg" alt="photo 4">
+          </a>
+        </li>
+        <li class="slide" id="slide5">
+          <a href="#">
+             <p class="caption">Mogan</p>
+             <img src="../../../assets/images/Mogan.jpg" alt="photo 5">
+          </a>
+        </li>
+        <li class="slide">
+          <a href="#">
+            <p class="caption">Roque Nublo</p>
+            <img src="../../../assets/images/Roque_nublo.jpg" alt="photo 1">
+          </a>
+        </li>
+      </ul>
+      <!-- <ul class="slider-controler">
+        <li><a href="#slide1">&bullet;</a></li>
+        <li><a href="#slide2">&bullet;</a></li>
+        <li><a href="#slide3">&bullet;</a></li>
+        <li><a href="#slide4">&bullet;</a></li>
+        <li><a href="#slide5">&bullet;</a></li>
+      </ul> -->
+    </div>
+  </div>
+
+<div *ngFor="let p of places">
+    <app-place-card title="{{p.title}}" url="{{p.image}}" location="{{p.direction}}" routerLink="place/{{p.id}}"></app-place-card>
+</div>
