@@ -1,7 +1,7 @@
 package com.example.backend.security.controllers;
 
-import com.example.backend.entity.service.repository.RoleRepository;
-import com.example.backend.entity.service.repository.UserRepository;
+import com.example.backend.entity.repository.RoleRepository;
+import com.example.backend.entity.repository.UserRepository;
 import com.example.backend.entity.models.ERole;
 import com.example.backend.entity.models.Role;
 import com.example.backend.entity.models.User;

@@ -2,6 +2,7 @@ package com.example.backend.entity.service.impl;
 
 import com.example.backend.entity.dao.IReviewDao;
 import com.example.backend.entity.models.Review;
+import com.example.backend.entity.service.IReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

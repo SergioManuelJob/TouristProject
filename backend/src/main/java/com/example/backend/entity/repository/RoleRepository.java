@@ -1,4 +1,4 @@
-package com.example.backend.entity.service.repository;
+package com.example.backend.entity.repository;
 
 import com.example.backend.entity.models.ERole;
 import com.example.backend.entity.models.Role;

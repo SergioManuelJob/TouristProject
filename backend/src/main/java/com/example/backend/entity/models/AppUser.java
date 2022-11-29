@@ -20,9 +20,6 @@ public class AppUser implements Serializable {
     private String email;
     private String image;
     private boolean role;
-    @JsonIgnore
-    @OneToMany(mappedBy = "appUserId")
-    private List<Review> reviews;
 
     public AppUser(long id, String username, String password, String email, String image, Boolean role) {
         super();

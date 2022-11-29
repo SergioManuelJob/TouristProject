@@ -26,7 +26,7 @@ public class Review implements Serializable {
     private Date time;
     private boolean liked;
     @ManyToOne
-    private AppUser appUserId;
+    private User appUserId;
     @ManyToOne
     private Place placeId;
 
@@ -70,11 +70,11 @@ public class Review implements Serializable {
         this.liked = like;
     }
 
-    public AppUser getUserId() {
+    public User getUserId() {
         return appUserId;
     }
 
-    public void setUserId(AppUser appUserId) {
+    public void setUserId(User appUserId) {
         this.appUserId = appUserId;
     }
 
