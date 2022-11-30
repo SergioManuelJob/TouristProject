@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-place-card',
@@ -8,16 +8,18 @@ import { Component, Input } from '@angular/core';
 export class PlaceCardComponent {
 
   @Input()
-  title: String;
-  @Input()
-  url: String;
-  @Input()
-  location: String;
+  title: string;
+
+  @Input() 
+  url: string;
+
+  @Input() 
+  location: string;
 
   constructor(){
-    this.title = ""
-    this.url = ""
-    this.location = ""
+    this.title = "";
+    this.url = "";
+    this.location = "";
   }
 
 }

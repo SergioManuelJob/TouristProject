@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Place } from 'src/app/Models/place';
 import { PlaceService } from 'src/app/services/place.service';
 
 @Component({
@@ -10,12 +9,11 @@ import { PlaceService } from 'src/app/services/place.service';
 })
 export class PlacePageComponent {
 
-  place: Place;
+  place: any;
   id: any;
   activatedRoute: ActivatedRoute;
 
-  constructor(private placeService: PlaceService, private router: Router, activatedRoute: ActivatedRoute, place: Place){
-    this.place = place;
+  constructor(private placeService: PlaceService, private router: Router, activatedRoute: ActivatedRoute){
     this.activatedRoute = activatedRoute;
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
     this.fillPlace();
@@ -26,7 +24,5 @@ export class PlacePageComponent {
       this.place = data; 
     })
   }
-
-
 
 }

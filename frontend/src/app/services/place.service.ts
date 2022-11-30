@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Place } from '../Models/place';
+import Place from '../Models/place';
+// import { Place } from '../Models/place';
 
 const httpOptiosUsingUrlEncoded = {
   headers: new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'})

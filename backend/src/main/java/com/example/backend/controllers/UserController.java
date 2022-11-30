@@ -4,6 +4,7 @@ import com.example.backend.entity.models.AppUser;
 import com.example.backend.entity.models.User;
 import com.example.backend.entity.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,12 +30,12 @@ public class UserController {
     public void post(User user) {
         userService.post(user);
     }
-
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     @PutMapping("/user/{id}")
     public void put(User user, @PathVariable(value = "id") long id) {
         userService.put(user, id);
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/user/{id}")
     public void delete(@PathVariable(value = "id") long id) {
         userService.delete(id);

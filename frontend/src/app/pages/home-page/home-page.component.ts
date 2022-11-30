@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { PlaceCardComponent } from 'src/app/components/place-card/place-card.component';
-import { Place } from 'src/app/Models/place';
+import Place from 'src/app/Models/place';
 import { PlaceService } from 'src/app/services/place.service';
 @Component({
   selector: 'app-home-page',
@@ -25,7 +25,7 @@ export class HomePageComponent {
   }
 
   goToThisPlace(id: number){
-
+    this.router.navigateByUrl(`place/${id}`);
   }
 
   getAllPlaces(){

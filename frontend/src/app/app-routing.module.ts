@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { HelpPageComponent } from './pages/help-page/help-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LogInPageComponent } from './pages/log-in-page/log-in-page.component';
@@ -22,7 +21,7 @@ const routes: Routes = [
   //   component: PlacePageComponent,
   // },
   {
-    path: 'place:id',
+    path: 'place/:id',
     component: PlacePageComponent,
   },
   {
