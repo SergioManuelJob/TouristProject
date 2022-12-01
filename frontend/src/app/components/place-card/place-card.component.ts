@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-place-card',
@@ -11,15 +12,19 @@ export class PlaceCardComponent {
   title: string;
 
   @Input() 
-  url: string;
+  image: SafeResourceUrl;
+
+  @Input()
+  typeImg: string;
 
   @Input() 
   location: string;
 
   constructor(){
     this.title = "";
-    this.url = "";
+    this.image = "";
     this.location = "";
+    this.typeImg = "";
   }
 
 }

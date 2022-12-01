@@ -2,7 +2,7 @@
 
 <div id="containerDetails">
     <h2>{{place.title}}</h2>
-    <img src="{{place.image}}">
+    <img src="{{'data:{{place.typeImg}};base64,' + place.image}}">
     <p>{{place.direction}}</p>
     <p>{{place.description}}</p>
 </div>

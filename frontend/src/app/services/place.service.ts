@@ -34,7 +34,7 @@ export class PlaceService {
     data.append("title", place.title)
     data.append("description", place.description)
     data.append("direction",place.direction)
-    data.append("image",place.image)
+    // data.append("image",place.image.toStri)
     return this.httpClient.put(this.endpoint + "/" + id, data, httpOptiosUsingUrlEncoded);
   }
 
@@ -43,7 +43,7 @@ export class PlaceService {
     data.append("title", place.title)
     data.append("description", place.description)
     data.append("direction",place.direction)
-    data.append("image",place.image)
+    // data.append("image",place.image)
     return this.httpClient.post(this.endpoint, data, httpOptiosUsingUrlEncoded);
   }
 

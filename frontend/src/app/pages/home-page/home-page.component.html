@@ -51,5 +51,5 @@
   </div>
 
 <div *ngFor="let p of places">
-    <app-place-card title="{{p.title}}" url="{{p.image}}" location="{{p.direction}}" (click)="goToThisPlace(p.id)"></app-place-card>
+    <app-place-card title="{{p.title}}" image="{{p.image}}" location="{{p.direction}}" typeImg="{{p.typeImg}}" (click)="goToThisPlace(p.id)"></app-place-card>
 </div>
