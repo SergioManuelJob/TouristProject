@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -18,6 +17,7 @@ import { InformationPageComponent } from './pages/information-page/information-p
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { PlacePageComponent } from './pages/place-page/place-page.component';
 import { ReviewCommentComponent } from './components/review-comment/review-comment.component';
+
 
 @NgModule({
   declarations: [

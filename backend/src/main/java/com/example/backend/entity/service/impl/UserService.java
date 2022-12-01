@@ -1,7 +1,6 @@
 package com.example.backend.entity.service.impl;
 
 import com.example.backend.entity.dao.IUserDao;
-import com.example.backend.entity.models.AppUser;
 import com.example.backend.entity.models.User;
 import com.example.backend.entity.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;

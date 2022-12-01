@@ -1,54 +1,23 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="wrapper">
-    <div class="slider" id="slider">
-      <ul class="slides">
-        <li class="slide" id="slide1">
-          <a href="#">
-            <p class="caption">Roque Nublo</p>
-            <img src="../../../assets/images/Roque_nublo.jpg" alt="photo 1">
-          </a>
-        </li>
-        <li class="slide" id="slide2">
-          <a href="#">
-            <p class="caption">Maspalomas</p>
-            <img src="../../../assets/images/Maspalomas.jpg" alt="photo 2">
-          </a>
-        </li>
-        <li class="slide" id="slide3">
-          <a href="#">
-            <p class="caption">Telde</p>
-            <img src="../../../assets/images/Telde.jpg" alt="photo 3">
-          </a>
-        </li>
-        <li class="slide" id="slide4">
-          <a href="#">
-            <p class="caption">Teror</p>
-            <img src="../../../assets/images/Teror.jpg" alt="photo 4">
-          </a>
-        </li>
-        <li class="slide" id="slide5">
-          <a href="#">
-             <p class="caption">Mogan</p>
-             <img src="../../../assets/images/Mogan.jpg" alt="photo 5">
-          </a>
-        </li>
-        <li class="slide">
-          <a href="#">
-            <p class="caption">Roque Nublo</p>
-            <img src="../../../assets/images/Roque_nublo.jpg" alt="photo 1">
-          </a>
-        </li>
-      </ul>
-      <!-- <ul class="slider-controler">
-        <li><a href="#slide1">&bullet;</a></li>
-        <li><a href="#slide2">&bullet;</a></li>
-        <li><a href="#slide3">&bullet;</a></li>
-        <li><a href="#slide4">&bullet;</a></li>
-        <li><a href="#slide5">&bullet;</a></li>
-      </ul> -->
+<div  class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="../../../assets/images/Roque_nublo.jpg" style="width:100%">
     </div>
-  </div>
+
+    <div class="mySlides fade">
+        <img src="../../../assets/images/Maspalomas.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+        <img src="../../../assets/images/Telde.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
 
 <div *ngFor="let p of places">
     <app-place-card title="{{p.title}}" image="{{p.image}}" location="{{p.direction}}" typeImg="{{p.typeImg}}" (click)="goToThisPlace(p.id)"></app-place-card>

@@ -1,6 +1,5 @@
 package com.example.backend.entity.dao;
 
-import com.example.backend.entity.models.AppUser;
 import com.example.backend.entity.models.User;
 import org.springframework.data.repository.CrudRepository;
 

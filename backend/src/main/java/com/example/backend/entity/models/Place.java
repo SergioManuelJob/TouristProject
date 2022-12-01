@@ -1,12 +1,18 @@
 package com.example.backend.entity.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Place implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -18,23 +24,13 @@ public class Place implements Serializable {
     private String title;
     private String description;
     private String direction;
-    private String image;
+    private String nameImg;
+    private String typeImg;
+    @Column(name = "image", unique = false, nullable = false, length = 100000)
+    private byte[] image;
     @JsonIgnore
     @OneToMany(mappedBy = "placeId")
     private List<Review> reviews;
-
-    public Place(long id, String title, String description, String direction, String image) {
-        super();
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.direction = direction;
-        this.image = image;
-    }
-
-    public Place() {
-        super();
-    }
 
     public long getId() {
         return id;
@@ -68,11 +64,11 @@ public class Place implements Serializable {
         this.direction = direction;
     }
 
-    public String getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 
@@ -82,5 +78,21 @@ public class Place implements Serializable {
 
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
+    }
+
+    public String getNameImg() {
+        return nameImg;
+    }
+
+    public void setNameImg(String nameImg) {
+        this.nameImg = nameImg;
+    }
+
+    public String getTypeImg() {
+        return typeImg;
+    }
+
+    public void setTypeImg(String typeImg) {
+        this.typeImg = typeImg;
     }
 }
