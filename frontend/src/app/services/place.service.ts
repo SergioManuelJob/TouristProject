@@ -2,10 +2,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import Place from '../Models/place';
 
-const httpOptiosUsingUrlEncoded = {
-  headers: new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'})
-}
-
 
 @Injectable({
   providedIn: 'root'
@@ -29,21 +25,21 @@ export class PlaceService {
   }
 
   updatePlace(id: number, place: Place, blob: any){
-    let data = new URLSearchParams();
+    let data = new FormData();
     data.append("title", place.title)
     data.append("description", place.description)
     data.append("direction",place.direction)
     data.append("file", blob)
-    return this.httpClient.put(this.endpoint + "/" + id, data, httpOptiosUsingUrlEncoded);
+    return this.httpClient.put(this.endpoint + "/" + id, data);
   }
 
   createPlace(place: Place, blob: any){
-    let data = new URLSearchParams();
+    let data = new FormData();
     data.append("title", place.title)
     data.append("description", place.description)
     data.append("direction",place.direction)
     data.append("file", blob)
-    return this.httpClient.post(this.endpoint, data, httpOptiosUsingUrlEncoded);
+    return this.httpClient.post(this.endpoint, data);
   }
 
 }

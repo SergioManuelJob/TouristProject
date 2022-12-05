@@ -10,6 +10,9 @@
 <h2>Username</h2>
 <h2>Email@youremail.com</h2>
 
+<button *ngxPermissionsOnly="['ROLE_ADMIN']">List Places</button>
+<button *ngxPermissionsOnly="['ROLE_ADMIN']">List Users</button>
+
 <p>Reviews: </p>
 
 <app-review-card score="0" place="Roque Nublo" date="22/07/11"></app-review-card>

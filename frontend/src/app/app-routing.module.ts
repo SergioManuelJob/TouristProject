@@ -10,16 +10,27 @@ import { InformationPageComponent } from './pages/information-page/information-p
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { PlacePageComponent } from './pages/place-page/place-page.component';
 import { ConfigurationPageComponent } from './pages/configuration-page/configuration-page.component';
+import { AuthGuard } from './Models/auth-guard';
+import { AdminPlacesComponent } from './pages/admin-places/admin-places.component';
+import { AdminUsersComponent } from './pages/admin-users/admin-users.component';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomePageComponent,
   },
-  // {
-  //   path: 'place',
-  //   component: PlacePageComponent,
-  // },
+  {
+    path: 'adminPlace', component: AdminPlacesComponent, canActivate: [AuthGuard],
+    data: {
+      role: 'ROLE_ADMIN'
+    }
+  }, 
+  {
+    path: 'adminUsers', component: AdminUsersComponent, canActivate: [AuthGuard],
+    data: {
+      role: 'ROLE_ADMIN'
+    }
+  }, 
   {
     path: 'place/:id',
     component: PlacePageComponent,

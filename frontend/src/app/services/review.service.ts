@@ -2,10 +2,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Review } from '../Models/review';
 
-const httpOptiosUsingUrlEncoded = {
-  headers: new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'})
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -28,22 +24,22 @@ export class ReviewService {
   }
 
   updateReview(id: number, review: Review){
-    let data = new URLSearchParams();
+    let data = new FormData();
     data.append("description", review.description)
     data.append("liked", review.liked.toString())
     data.append("time",review.time.toString())
     data.append("app_user_id_id",review.app_user_id.toString())
     data.append("place_id_id",review.place_id.toString())
-    return this.httpClient.put(this.endpoint + "/" + id, data, httpOptiosUsingUrlEncoded);
+    return this.httpClient.put(this.endpoint + "/" + id, data);
   }
 
   createReview(review: Review){
-    let data = new URLSearchParams();
+    let data = new FormData();
     data.append("description", review.description)
     data.append("liked", review.liked.toString())
     data.append("time",review.time.toString())
     data.append("app_user_id_id",review.app_user_id.toString())
     data.append("place_id_id",review.place_id.toString())
-    return this.httpClient.post(this.endpoint, data, httpOptiosUsingUrlEncoded);
+    return this.httpClient.post(this.endpoint, data);
   }
 }

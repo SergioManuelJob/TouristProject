@@ -2,10 +2,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../Models/user';
 
-const httpOptiosUsingUrlEncoded = {
-  headers: new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'})
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -28,11 +24,11 @@ export class UserService {
   }
 
   updateUser(id: number, user: User){
-    let data = new URLSearchParams();
+    let data = new FormData();
     data.append("username", user.username)
     data.append("email", user.email)
     data.append("password",user.password)
-    return this.httpClient.put(this.endpoint + "/" + id, data, httpOptiosUsingUrlEncoded);
+    return this.httpClient.put(this.endpoint + "/" + id, data);
   }
 
 }

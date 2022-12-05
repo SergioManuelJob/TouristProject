@@ -17,7 +17,9 @@ import { InformationPageComponent } from './pages/information-page/information-p
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { PlacePageComponent } from './pages/place-page/place-page.component';
 import { ReviewCommentComponent } from './components/review-comment/review-comment.component';
-
+import { NgxPermissionsModule } from 'ngx-permissions';
+import { AdminPlacesComponent } from './pages/admin-places/admin-places.component';
+import { AdminUsersComponent } from './pages/admin-users/admin-users.component'
 
 @NgModule({
   declarations: [
@@ -35,12 +37,15 @@ import { ReviewCommentComponent } from './components/review-comment/review-comme
     ContactPageComponent,
     PlacePageComponent,
     ReviewCommentComponent,
+    AdminPlacesComponent,
+    AdminUsersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterOutlet,
-    HttpClientModule
+    HttpClientModule,
+    NgxPermissionsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
