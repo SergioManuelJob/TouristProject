@@ -7,7 +7,6 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PlaceCardComponent } from './components/place-card/place-card.component';
 import { LogInPageComponent } from './pages/log-in-page/log-in-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { RouterOutlet } from '@angular/router';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { HelpPageComponent } from './pages/help-page/help-page.component';
 import { HelpCardComponent } from './components/help-card/help-card.component';
@@ -20,6 +19,16 @@ import { ReviewCommentComponent } from './components/review-comment/review-comme
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { AdminPlacesComponent } from './pages/admin-places/admin-places.component';
 import { AdminUsersComponent } from './pages/admin-users/admin-users.component'
+import { ConfigurationPageComponent } from './pages/configuration-page/configuration-page.component';
+
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
+
+import { RouterOutlet } from '@angular/router';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog'
+import { MatButtonModule } from '@angular/material/button';
+import { DialogoConfirmacionComponent } from './components/dialogo-confirmacion/dialogo-confirmacion.component'
 
 @NgModule({
   declarations: [
@@ -31,6 +40,7 @@ import { AdminUsersComponent } from './pages/admin-users/admin-users.component'
     RegisterPageComponent,
     HelpPageComponent,
     HelpCardComponent,
+    ConfigurationPageComponent,
     ProfilePageComponent,
     ReviewCardComponent,
     InformationPageComponent,
@@ -39,13 +49,19 @@ import { AdminUsersComponent } from './pages/admin-users/admin-users.component'
     ReviewCommentComponent,
     AdminPlacesComponent,
     AdminUsersComponent,
+    DialogoConfirmacionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterOutlet,
     HttpClientModule,
-    NgxPermissionsModule.forRoot()
+    NgxPermissionsModule.forRoot(),
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,2 +1,21 @@
-<!-- <app-nav-bar></app-nav-bar> -->
+<app-nav-bar></app-nav-bar>
 <img id="profilePic" src="../../../assets/images/userUnlogged.png">
+
+<form (ngSubmit)="onSubmit()" [formGroup]="user">
+    <label>Username</label>
+    <input 
+        type="text"
+        placeholder="Your username" 
+        formControlName="name"
+        required>
+    <label>Email</label>
+    <input 
+        type="text"
+        placeholder="Your email" 
+        formControlName="email"
+        required>
+    <div>
+        <button type="submit" [disabled]="user.invalid">Update</button>
+    </div>
+</form>
+
