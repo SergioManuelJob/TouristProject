@@ -16,11 +16,11 @@ export class UserService {
   }
 
   getOneUser(id: number){
-    return this.httpClient.get<User>(this.endpoint + "/" + id);  
+    return this.httpClient.get<User>(this.endpoint + "/" + id).subscribe(data => { });
   }
 
   deleteUser(id: number){
-    return this.httpClient.delete<User>(this.endpoint + "/" + id);
+    return this.httpClient.delete<User>(this.endpoint + "/" + id).subscribe(response => { }, (error) => { console.log(error) });
   }
 
   updateUser(id: number, user: User){
@@ -28,7 +28,7 @@ export class UserService {
     data.append("username", user.username)
     data.append("email", user.email)
     data.append("password",user.password)
-    return this.httpClient.put(this.endpoint + "/" + id, data);
+    return this.httpClient.put(this.endpoint + "/" + id, data).subscribe(response => { }, (error) => { console.log(error) });
   }
 
 }

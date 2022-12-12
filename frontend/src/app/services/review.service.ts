@@ -20,7 +20,7 @@ export class ReviewService {
   }
 
   deleteReview(id: number){
-    return this.httpClient.delete<Review>(this.endpoint + "/" + id);
+    return this.httpClient.delete<Review>(this.endpoint + "/" + id).subscribe(data => { });
   }
 
   updateReview(id: number, review: Review){
@@ -30,7 +30,7 @@ export class ReviewService {
     data.append("time",review.time.toString())
     data.append("app_user_id_id",review.app_user_id.toString())
     data.append("place_id_id",review.place_id.toString())
-    return this.httpClient.put(this.endpoint + "/" + id, data);
+    return this.httpClient.put(this.endpoint + "/" + id, data).subscribe(response => { }, (error) => { console.log(error) });
   }
 
   createReview(review: Review){
@@ -40,6 +40,6 @@ export class ReviewService {
     data.append("time",review.time.toString())
     data.append("app_user_id_id",review.app_user_id.toString())
     data.append("place_id_id",review.place_id.toString())
-    return this.httpClient.post(this.endpoint, data);
+    return this.httpClient.post(this.endpoint, data).subscribe(response => { }, (error) => { console.log(error) });
   }
 }

@@ -15,15 +15,12 @@ export class HomePageComponent {
   places: Place[];
   router: Router;
   public search: string = '';
-  public miToken: number;
   
   constructor(private placeService: PlaceService, router: Router, private name: LoadScriptService){
-    this.miToken = 0;
     name.Load(["slider"]);
     this.places = []; 
     this.router = router;
     this.getAllPlaces();
-    
   }
 
   goToPlace(){

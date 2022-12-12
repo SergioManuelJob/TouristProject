@@ -35,3 +35,27 @@ div img{
     margin-top: 10%;
     align-self: flex-start;
 }
+
+#buttonContainer{
+    display: flex;
+    width:80%;
+    padding:1em;
+    margin:1em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1em;
+    background-color: #E26A2C;
+}
+
+#buttonContainer button{
+    border: none;
+    border-radius: 1em;
+    margin-top:1em;
+    padding: 1em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black;
+    background-color: #FFD07F;
+    width: 60%;
+}

@@ -1,12 +1,17 @@
 <app-nav-bar></app-nav-bar>
 
 <div id="containerForm">
-    <form>
-        <h2>Contact</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="contact">
         <label>Subject</label>
-        <input placeholder="Type..." required>
+        <input 
+            type="text"
+            placeholder="Type..." 
+            formControlName="subject">
         <label>Description</label>
-        <textarea placeholder="Type..." required></textarea>
-        <button type="submit" routerLink="/help">Send</button>
+        <textarea 
+            type="text"
+            placeholder="Type..." 
+            formControlName="description"></textarea>
+            <button type="submit" [disabled]="contact.invalid">Send</button>
     </form>
 </div>

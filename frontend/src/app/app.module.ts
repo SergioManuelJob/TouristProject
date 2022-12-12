@@ -20,6 +20,14 @@ import { ReviewCommentComponent } from './components/review-comment/review-comme
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { AdminPlacesComponent } from './pages/admin-places/admin-places.component';
 import { AdminUsersComponent } from './pages/admin-users/admin-users.component'
+import { ConfigurationPageComponent } from './pages/configuration-page/configuration-page.component';
+import { DialogoConfirmacionComponent } from './components/dialogo-confirmacion/dialogo-confirmacion.component';
+
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog'
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -39,13 +47,20 @@ import { AdminUsersComponent } from './pages/admin-users/admin-users.component'
     ReviewCommentComponent,
     AdminPlacesComponent,
     AdminUsersComponent,
+    ConfigurationPageComponent,
+    DialogoConfirmacionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterOutlet,
     HttpClientModule,
-    NgxPermissionsModule.forRoot()
+    NgxPermissionsModule.forRoot(),
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

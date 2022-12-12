@@ -21,7 +21,7 @@ export class PlaceService {
   }
 
   deletePlace(id: number){
-    return this.httpClient.delete<Place>(this.endpoint + "/" + id);
+    return this.httpClient.delete<Place>(this.endpoint + "/" + id).subscribe(data => { });
   }
 
   updatePlace(id: number, place: Place, blob: any){
@@ -30,7 +30,7 @@ export class PlaceService {
     data.append("description", place.description)
     data.append("direction",place.direction)
     data.append("file", blob)
-    return this.httpClient.put(this.endpoint + "/" + id, data);
+    return this.httpClient.put(this.endpoint + "/" + id, data).subscribe(response => { }, (error) => { console.log(error) });
   }
 
   createPlace(place: Place, blob: any){
@@ -39,7 +39,7 @@ export class PlaceService {
     data.append("description", place.description)
     data.append("direction",place.direction)
     data.append("file", blob)
-    return this.httpClient.post(this.endpoint, data);
+    return this.httpClient.post(this.endpoint, data).subscribe(response => { }, (error) => { console.log(error) });
   }
 
 }

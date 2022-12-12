@@ -1,13 +1,19 @@
 <app-nav-bar></app-nav-bar>
 <a routerLink="/help"><img src="../../assets/images/doubts.png"></a>
-<div id="containerForm">
-    <form>
+<div id="containerForm"> 
+    <form (ngSubmit)="onSubmit()" [formGroup]="user">
         <h2>Log In</h2>
         <label>Username</label>
-        <input placeholder="Type..." required>
+        <input 
+            type="text"
+            placeholder="Type..." 
+            formControlName="username">
         <label>Password</label>
-        <input placeholder="Type..." required type="password">
-        <button type="submit" routerLink="/profile">Log In</button>
+        <input 
+            type="text"
+            placeholder="Type..." 
+            formControlName="password">
+            <button type="submit" [disabled]="user.invalid">Log In</button>
     </form>
 </div>
 

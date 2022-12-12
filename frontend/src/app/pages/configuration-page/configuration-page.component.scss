@@ -1,4 +1,50 @@
 #profilePic{
     width:50%;
-    margin-left: 5%;
+    margin: 5%;
+    margin-left: 25%;
+    margin-bottom: 25%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    font-weight: bold;   
+    align-self: flex-start; 
+    margin-left: 20%;
+}
+
+input{
+    font-weight: bold;
+    width: 50%;
+    background-color: transparent;
+    border: none;
+    border-bottom:solid 2px #E26A2C;
+    margin: 2em;
+}
+
+button{
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black;
+    background-color: #FFD07F;
+    width: 40%;
+}
+
+div{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    background-color: #E26A2C;
+    width:100vw;
+    padding-top:0.3em;
+    padding-bottom:0.3em;
 }

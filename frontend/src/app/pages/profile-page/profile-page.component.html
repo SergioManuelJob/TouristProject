@@ -10,8 +10,10 @@
 <h2>Username</h2>
 <h2>Email@youremail.com</h2>
 
-<button *ngxPermissionsOnly="['ROLE_ADMIN']">List Places</button>
-<button *ngxPermissionsOnly="['ROLE_ADMIN']">List Users</button>
+<div id="buttonContainer" *ngxPermissionsOnly="['ROLE_ADMIN']">
+    <button>List Places</button>
+    <button>List Users</button>
+</div>
 
 <p>Reviews: </p>
 

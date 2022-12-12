@@ -3,16 +3,29 @@
 <a routerLink="/help"><img src="../../assets/images/doubts.png"></a>
 
 <div id="containerForm">
-    <form>
+    <form (ngSubmit)="onSubmit()" [formGroup]="user">
         <h2>Register</h2>
         <label>Username</label>
-        <input placeholder="Type..." required>
+        <input 
+            type="text"
+            placeholder="Type..." 
+            formControlName="username">
         <label>Email</label>
-        <input placeholder="Type..." required>
+        <input 
+            type="text"
+            placeholder="Type..." 
+            formControlName="email">
         <label>Password</label>
-        <input placeholder="Type..." required type="password">
+        <input 
+            type="text"
+            placeholder="Type..." 
+            formControlName="password">
         <label>Repeat Password</label>
-        <input placeholder="Type..." required type="password">
-        <button type="submit" routerLink="/logIn">Register</button>
+        <input 
+            type="text"
+            placeholder="Type..." 
+            formControlName="repeatPassword">
+
+        <button type="submit" [disabled]="user.invalid">Log In</button>
     </form>
 </div>
