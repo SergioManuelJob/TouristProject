@@ -7,7 +7,6 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PlaceCardComponent } from './components/place-card/place-card.component';
 import { LogInPageComponent } from './pages/log-in-page/log-in-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { RouterOutlet } from '@angular/router';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { HelpPageComponent } from './pages/help-page/help-page.component';
 import { HelpCardComponent } from './components/help-card/help-card.component';
@@ -22,6 +21,8 @@ import { AdminPlacesComponent } from './pages/admin-places/admin-places.componen
 import { AdminUsersComponent } from './pages/admin-users/admin-users.component'
 import { ConfigurationPageComponent } from './pages/configuration-page/configuration-page.component';
 import { DialogoConfirmacionComponent } from './components/dialogo-confirmacion/dialogo-confirmacion.component';
+
+import { RouterOutlet } from '@angular/router';
 
 import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 
@@ -39,6 +40,7 @@ import { MatButtonModule } from '@angular/material/button';
     RegisterPageComponent,
     HelpPageComponent,
     HelpCardComponent,
+    ConfigurationPageComponent,
     ProfilePageComponent,
     ReviewCardComponent,
     InformationPageComponent,
