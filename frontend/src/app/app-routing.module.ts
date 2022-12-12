@@ -20,13 +20,17 @@ const routes: Routes = [
     component: HomePageComponent,
   },
   {
-    path: 'adminPlace', component: AdminPlacesComponent, canActivate: [AuthGuard],
-    data: {
-      role: 'ROLE_ADMIN'
-    }
+    path: 'adminPlaces', 
+    component: AdminPlacesComponent, 
+    canActivate: [AuthGuard],
+      data: {
+        role: 'ROLE_ADMIN'
+      }
   }, 
   {
-    path: 'adminUsers', component: AdminUsersComponent, canActivate: [AuthGuard],
+    path: 'adminUsers', 
+    component: AdminUsersComponent, 
+    canActivate: [AuthGuard],
     data: {
       role: 'ROLE_ADMIN'
     }
