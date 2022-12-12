@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgxPermissionsService } from 'ngx-permissions';
 import { AuthService } from './services/auth.service';
+import { StorageService } from './services/storage.service';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,18 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'Tourist Places';
+  roles: string[];
 
   constructor(private permissionsService: NgxPermissionsService, 
-    private authService: AuthService) { }
+    private authService: AuthService,
+    private storage: StorageService) {
+      this.roles = this.storage.getUser().roles
+     }
 
   ngOnInit(): void {
-    let perm = this.authService.getRole();
-
-    this.permissionsService.loadPermissions([perm]);
+    if(this.storage.getToken()){
+    const perm: any[] = [this.roles];
+    this.permissionsService.loadPermissions(perm);
+    }
   }
 }

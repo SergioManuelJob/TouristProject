@@ -1,4 +1,6 @@
 div{
+    display: flex;
+    justify-content: space-between;
     background-color: #E26A2C;
     width:100vw;
     position: sticky;
@@ -15,8 +17,7 @@ a{
 }
 
 #profilePic{
-    margin-top:0.4em;
+    margin:0.4em;
     float: right;
-    width:5.2em;  
-    height: 100%;
+    width:7em;  
 }

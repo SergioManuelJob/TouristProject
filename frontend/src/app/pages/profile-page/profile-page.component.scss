@@ -51,11 +51,14 @@ div img{
 #buttonContainer button{
     border: none;
     border-radius: 1em;
-    margin-top:1em;
     padding: 1em;
     font-size: 1.3em;
     font-weight: bold;
     color: black;
     background-color: #FFD07F;
     width: 60%;
+}
+
+#buttonContainer button:first-child{
+    margin-bottom: 1em;
 }

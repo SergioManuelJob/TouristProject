@@ -11,10 +11,8 @@ export class PlacePageComponent {
 
   place: any;
   id: any;
-  activatedRoute: ActivatedRoute;
 
-  constructor(private placeService: PlaceService, private router: Router, activatedRoute: ActivatedRoute){
-    this.activatedRoute = activatedRoute;
+  constructor(private placeService: PlaceService, private router: Router, private activatedRoute: ActivatedRoute){
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
     this.fillPlace();
   }
