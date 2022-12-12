@@ -76,6 +76,7 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+
         byte[] username = Base64.getDecoder().decode(signUpRequest.getUsername());
         String decodedUsername = new String(username);
         byte[] password = Base64.getDecoder().decode(signUpRequest.getPassword());
