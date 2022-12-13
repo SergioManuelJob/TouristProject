@@ -16,18 +16,17 @@ export class UserService {
   }
 
   getOneUser(id: number){
-    return this.httpClient.get<User>(this.endpoint + "/" + id).subscribe(data => { });
+    return this.httpClient.get<User>(this.endpoint + "/" + id)
   }
 
   deleteUser(id: number){
     return this.httpClient.delete<User>(this.endpoint + "/" + id).subscribe(response => { }, (error) => { console.log(error) });
   }
 
-  updateUser(id: number, user: User){
+  updateUserWithoutPassword(id: number, user: User){
     let data = new FormData();
     data.append("username", user.username)
     data.append("email", user.email)
-    data.append("password",user.password)
     return this.httpClient.put(this.endpoint + "/" + id, data).subscribe(response => { }, (error) => { console.log(error) });
   }
 

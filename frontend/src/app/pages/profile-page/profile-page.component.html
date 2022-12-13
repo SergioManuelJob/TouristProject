@@ -1,14 +1,17 @@
 <app-nav-bar></app-nav-bar>
 <div id="imageContainer">
-    <a routerLink="/configuration"><img src="../../assets/images/configuration.png"></a>
-    <a routerLink="/help"><img src="../../assets/images/doubts.png"></a>
+    <img src="../../assets/images/configuration.png" routerLink="/configuration">
+    <img src="../../assets/images/doubts.png" routerLink="/help">
+    <img id="logout" src="../../assets/images/logout.png" (click)="logout()">
 </div>
 
 <div id="informationContainer">
-<img id="profilePic" src="../../../assets/images/userUnlogged.png">
+    <img *ngxPermissionsExcept="['ROLE_ADMIN', 'ROLE_USER']" id="profilePic" src="../../assets/images/userUnlogged.png" />
+    <img *ngxPermissionsOnly="['ROLE_USER']" id="profilePic" src="assets/images/userPlaceholder.png" />
+    <img *ngxPermissionsOnly="['ROLE_ADMIN']" id="profilePic" src="../../assets/images/userAdmin.png" />
 
-<h2>Username</h2>
-<h2>Email@youremail.com</h2>
+<h2>{{user.username}}</h2>
+<h3>{{user.email}}</h3>
 
 <div id="buttonContainer" *ngxPermissionsOnly="['ROLE_ADMIN']">
     <button routerLink="/adminPlaces">List Places</button>

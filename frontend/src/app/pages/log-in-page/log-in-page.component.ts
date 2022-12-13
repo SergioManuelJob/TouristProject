@@ -51,17 +51,6 @@ export class LogInPageComponent {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.storage.getUser().roles;
-        console.log(this.roles)
-        switch (this.roles.toString()) {
-          case 'ROLE_ADMIN': {
-            console.log('llegué como admin')
-          break;
-          }
-          case 'ROLE_USER': {
-            console.log('llegué como user')
-          break;
-          }
-        }
         const perm: any[] = [this.roles];
           this.permissionsService.loadPermissions(perm);
           this.router.navigateByUrl("/profile");

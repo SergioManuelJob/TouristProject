@@ -29,9 +29,11 @@ public class UserController {
     public void post(User user) {
         userService.post(user);
     }
-    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+
     @PutMapping("/user/{id}")
     public void put(User user, @PathVariable(value = "id") long id) {
+        user.setPassword(getOne(id).getPassword());
+        user.setRoles(getOne(id).getRoles());
         userService.put(user, id);
     }
     @PreAuthorize("hasRole('ADMIN')")

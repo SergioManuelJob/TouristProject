@@ -1,15 +1,19 @@
 <app-nav-bar></app-nav-bar>
-<img id="profilePic" src="../../../assets/images/userUnlogged.png">
+<img *ngxPermissionsExcept="['ROLE_ADMIN', 'ROLE_USER']" id="profilePic" src="../../assets/images/userUnlogged.png" />
+<img *ngxPermissionsOnly="['ROLE_USER']" id="profilePic" src="assets/images/userPlaceholder.png" />
+<img *ngxPermissionsOnly="['ROLE_ADMIN']" id="profilePic" src="../../assets/images/userAdmin.png" />
 
 <form (ngSubmit)="onSubmit()" [formGroup]="user">
     <label>Username</label>
     <input 
+        [(ngModel)]="username"
         type="text"
         placeholder="Your username" 
         formControlName="name"
         required>
     <label>Email</label>
     <input 
+        [(ngModel)]="email"
         type="text"
         placeholder="Your email" 
         formControlName="email"
