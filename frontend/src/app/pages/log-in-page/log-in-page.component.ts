@@ -12,6 +12,7 @@ import { StorageService } from 'src/app/services/storage.service';
   styleUrls: ['./log-in-page.component.scss']
 })
 export class LogInPageComponent {
+  
   user: FormGroup;
   private login: LogInUser;
   isLogin = false;
@@ -42,12 +43,10 @@ export class LogInPageComponent {
 
   onSubmit(): void {
     this.login = { username: btoa(this.username?.value), password: btoa(this.password?.value) }
-    console.log(this.login.username + ' - ' + this.login.password)
     this.auth.login(this.login).subscribe(
       data => {
         this.storage.saveToken(data.accessToken);
         this.storage.saveUser(data);
-
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.storage.getUser().roles;

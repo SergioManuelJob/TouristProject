@@ -32,13 +32,11 @@ public class ReviewController {
         reviewService.post(review);
     }
 
-    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     @PutMapping("/review/{id}")
     public void put(Review review,@PathVariable(value = "id") long id) {
         reviewService.put(review, id);
     }
 
-    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     @DeleteMapping("/review/{id}")
     public void delete(@PathVariable(value = "id") long id) {
         reviewService.delete(id);

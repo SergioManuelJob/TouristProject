@@ -29,6 +29,8 @@ import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog'
 import { MatButtonModule } from '@angular/material/button';
+import { UserCardComponent } from './components/user-card/user-card.component';
+import { AdminPlaceCardComponent } from './components/admin-place-card/admin-place-card.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { MatButtonModule } from '@angular/material/button';
     AdminPlacesComponent,
     AdminUsersComponent,
     ConfigurationPageComponent,
-    DialogoConfirmacionComponent
+    DialogoConfirmacionComponent,
+    UserCardComponent,
+    AdminPlaceCardComponent
   ],
   imports: [
     BrowserModule,

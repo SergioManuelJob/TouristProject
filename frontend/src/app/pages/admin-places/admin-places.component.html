@@ -1,5 +1,5 @@
 <app-nav-bar></app-nav-bar>
 <div *ngFor="let p of places">
     <app-place-card title="{{p.title}}" image="{{p.image}}" location="{{p.direction}}" typeImg="{{p.typeImg}}"></app-place-card>
-    
+    <app-admin-place-card title="{{p.title}}" location="{{p.direction}}" id="{{p.id}}"></app-admin-place-card>
 </div>

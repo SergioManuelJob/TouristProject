@@ -1,6 +1,6 @@
 <div>
     <a routerLink="/inicio"><img src="../../assets/images/logo.png" id="logo" ></a>
     <img routerLink="/logIn" *ngxPermissionsExcept="['ROLE_ADMIN', 'ROLE_USER']" id="profilePic" src="../../assets/images/userUnlogged.png" />
-    <img routerLink="/profile" *ngxPermissionsOnly="['ROLE_USER']" id="profilePic" src="assets/images/userPlaceholder.png" />
-    <img routerLink="/profile" *ngxPermissionsOnly="['ROLE_ADMIN']" id="profilePic" src="../../assets/images/userAdmin.png" />
+    <img routerLink="/profile" *ngxPermissionsOnly="['ROLE_USER']" id="profilePicLogged" src="assets/images/loggedUser.png" />
+    <img routerLink="/profile" *ngxPermissionsOnly="['ROLE_ADMIN']" id="profilePicAdmin" src="../../assets/images/userAdmin.png" />
 </div>

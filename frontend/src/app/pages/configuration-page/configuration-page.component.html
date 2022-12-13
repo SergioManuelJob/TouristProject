@@ -1,6 +1,6 @@
 <app-nav-bar></app-nav-bar>
 <img *ngxPermissionsExcept="['ROLE_ADMIN', 'ROLE_USER']" id="profilePic" src="../../assets/images/userUnlogged.png" />
-<img *ngxPermissionsOnly="['ROLE_USER']" id="profilePic" src="assets/images/userPlaceholder.png" />
+<img *ngxPermissionsOnly="['ROLE_USER']" id="profilePic" src="assets/images/loggedUser.png" />
 <img *ngxPermissionsOnly="['ROLE_ADMIN']" id="profilePic" src="../../assets/images/userAdmin.png" />
 
 <form (ngSubmit)="onSubmit()" [formGroup]="user">

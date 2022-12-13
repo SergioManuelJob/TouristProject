@@ -1,1 +1,4 @@
 <app-nav-bar></app-nav-bar>
+<div *ngFor="let u of users">
+    <app-user-card username="{{u.username}}" email="{{u.email}}" id="{{u.id}}"></app-user-card>
+</div>
