@@ -1,6 +1,7 @@
 <div id="containerPlace">
     <h2> {{title}} </h2>
+    <img src="{{'data:{{typeImg}};base64,' + image}}">
     <p>Location: {{location}}</p>
-    <button (click)="update()">Update</button>
+    <button (click)="update()" id="update">Update</button>
     <button (click)="delete()" id="delete">Delete</button>
 </div>

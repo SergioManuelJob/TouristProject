@@ -53,7 +53,6 @@ export class LogInPageComponent {
         const perm: any[] = [this.roles];
           this.permissionsService.loadPermissions(perm);
           this.router.navigateByUrl("/profile");
-          alert("Log In Done Succesfully!")
         },
         err => {
           this.errorMessage = err.error.message;

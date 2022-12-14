@@ -19,8 +19,25 @@ p{
     margin-bottom: 1em;
 }
 
+img{
+    border: solid 2px black;
+    width: 60%;
+    border-radius: 10px;
+}
+
+#update{
+    border: solid 1px black;
+    border-radius: 0.5em;
+    background-color: blue;
+    color: white;
+    margin-top: 1em;
+    width: 40%;
+    padding: 0.5em;
+}
+
 #delete{
-    border: none;
+    border: solid 1px black;
+    border-radius: 0.5em;
     background-color: red;
     color: white;
     margin-top: 1em;

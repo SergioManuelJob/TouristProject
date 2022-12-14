@@ -1,0 +1,13 @@
+<app-nav-bar></app-nav-bar>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="place">
+    <img *ngIf="image == ''" src="assets/images/placeholder.png" alt="placeholder.png">
+    <img src="{{'data:{{typeImg}};base64,' + image}}" alt="">
+    <input id="inputFile" type="file" formControlName="image" (change)="file($event)">
+    <input [(ngModel)]="title" type="text" placeholder="Title..." formControlName="title">
+    <input [(ngModel)]="direction" type="text" placeholder="Direction..." formControlName="direction">
+    <textarea [(ngModel)]="description" type="text" placeholder="Description..." formControlName="description"></textarea>
+    <div>
+        <button type="submit" [disabled]="place.invalid">Update</button>
+    </div>
+</form>

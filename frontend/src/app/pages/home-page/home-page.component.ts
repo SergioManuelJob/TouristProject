@@ -15,28 +15,26 @@ export class HomePageComponent {
   places: Place[];
   router: Router;
   public search: string = '';
-  
-  constructor(private placeService: PlaceService, router: Router, private name: LoadScriptService){
+
+  constructor(private placeService: PlaceService, router: Router, private name: LoadScriptService) {
     name.Load(["slider"]);
-    this.places = []; 
+    this.places = [];
     this.router = router;
     this.getAllPlaces();
   }
 
-  goToPlace(){
+  goToPlace() {
     this.router.navigateByUrl("/place")
   }
 
-  goToThisPlace(id: number){
+  goToThisPlace(id: number) {
     this.router.navigateByUrl(`place/${id}`);
   }
 
-  getAllPlaces(){
+  getAllPlaces() {
     this.placeService.getAllPlaces().subscribe(data => {
       this.places = data;
-  
-      console.log(this.places)
-    }) 
+    })
 
   }
 

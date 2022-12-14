@@ -13,6 +13,8 @@ import { ConfigurationPageComponent } from './pages/configuration-page/configura
 import { AuthGuard } from './Models/auth-guard';
 import { AdminPlacesComponent } from './pages/admin-places/admin-places.component';
 import { AdminUsersComponent } from './pages/admin-users/admin-users.component';
+import { CreatePlacePageComponent } from './pages/create-place-page/create-place-page.component';
+import { UpdatePlacePageComponent } from './pages/update-place-page/update-place-page.component';
 
 const routes: Routes = [
   {
@@ -34,7 +36,23 @@ const routes: Routes = [
     data: {
       role: 'ROLE_ADMIN'
     }
-  }, 
+  },
+  {
+    path: 'createPlace', 
+    component: CreatePlacePageComponent, 
+    canActivate: [AuthGuard],
+    data: {
+      role: 'ROLE_ADMIN'
+    }
+  },
+  {
+    path: 'updatePlace/:id', 
+    component: UpdatePlacePageComponent, 
+    canActivate: [AuthGuard],
+    data: {
+      role: 'ROLE_ADMIN'
+    }
+  },
   {
     path: 'place/:id',
     component: PlacePageComponent,

@@ -31,6 +31,8 @@ import { MatDialogModule } from '@angular/material/dialog'
 import { MatButtonModule } from '@angular/material/button';
 import { UserCardComponent } from './components/user-card/user-card.component';
 import { AdminPlaceCardComponent } from './components/admin-place-card/admin-place-card.component';
+import { CreatePlacePageComponent } from './pages/create-place-page/create-place-page.component';
+import { UpdatePlacePageComponent } from './pages/update-place-page/update-place-page.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { AdminPlaceCardComponent } from './components/admin-place-card/admin-pla
     ConfigurationPageComponent,
     DialogoConfirmacionComponent,
     UserCardComponent,
-    AdminPlaceCardComponent
+    AdminPlaceCardComponent,
+    CreatePlacePageComponent,
+    UpdatePlacePageComponent
   ],
   imports: [
     BrowserModule,
