@@ -16,7 +16,7 @@ export class AppComponent {
     private authService: AuthService,
     private storage: StorageService) {
       this.roles = this.storage.getUser().roles
-     }
+    }
 
   ngOnInit(): void {
     if(this.storage.getToken()){

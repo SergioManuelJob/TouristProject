@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/Models/user';
+import { StorageService } from 'src/app/services/storage.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -11,14 +12,20 @@ export class AdminUsersComponent implements OnInit {
 
   users: User[];
 
-  constructor(private userService: UserService){
+  constructor(private userService: UserService, private storage: StorageService){
     this.users = [];
   }
 
   ngOnInit(){
     this.userService.getAllUsers().subscribe(data => {
       this.users = data;
-    })
+      for(let i = 0; i<this.users.length ; i++){
+        if(this.users[i].email == this.storage.getUser().email){
+          console.log(this.users[i])
+          this.users.splice(i, 1)
+        }
+      }
+    }) 
   }
 
 }

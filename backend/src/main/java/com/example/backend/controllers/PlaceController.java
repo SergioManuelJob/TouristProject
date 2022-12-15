@@ -43,7 +43,6 @@ public class PlaceController {
                 .build();
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/place")
     public void post(Place place, @RequestParam("file") MultipartFile image) throws IOException {
         String randomID = UUID.randomUUID().toString();
@@ -54,20 +53,24 @@ public class PlaceController {
         place.setImage(ImageUtility.compressImage(image.getBytes()));
         placeService.post(place);
     }
-
-    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/place/{id}")
     public void put(Place place,@PathVariable(value = "id") long id, @RequestParam("file") MultipartFile image) throws IOException {
-        String randomID = UUID.randomUUID().toString();
-        String filename = randomID.concat(randomID + image.getOriginalFilename().substring(image.getOriginalFilename().lastIndexOf(".")));
+        if(image != null) {
+            String randomID = UUID.randomUUID().toString();
+            String filename = randomID.concat(randomID + image.getOriginalFilename().substring(image.getOriginalFilename().lastIndexOf(".")));
 
-        place.setNameImg(filename);
-        place.setTypeImg(image.getContentType());
-        place.setImage(ImageUtility.compressImage(image.getBytes()));
+            place.setNameImg(filename);
+            place.setTypeImg(image.getContentType());
+            place.setImage(ImageUtility.compressImage(image.getBytes()));
+        }
+        else{
+            place.setNameImg(getOne(id).getNameImg());
+            place.setTypeImg(getOne(id).getTypeImg());
+            place.setImage(ImageUtility.compressImage(getOne(id).getImage()));
+        }
         placeService.put(place, id);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/place/{id}")
     public void delete(@PathVariable(value = "id") long id) {
         placeService.delete(id);
