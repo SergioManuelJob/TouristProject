@@ -29,7 +29,7 @@ public class Place implements Serializable {
     @Column(name = "image", unique = false, nullable = false, length = 100000)
     private byte[] image;
     @JsonIgnore
-    @OneToMany(mappedBy = "placeId")
+    @OneToMany(mappedBy = "placeId", cascade = CascadeType.ALL)
     private List<Review> reviews;
 
     public long getId() {

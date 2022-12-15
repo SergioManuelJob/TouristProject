@@ -38,7 +38,7 @@ public class User {
     private String password;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "appUserId")
+    @OneToMany(mappedBy = "appUserId", cascade = CascadeType.ALL)
     private List<Review> reviews;
 
 
