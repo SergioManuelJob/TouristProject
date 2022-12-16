@@ -37,6 +37,7 @@ public class PlaceController {
                 .nameImg(db.getNameImg())
                 .typeImg(db.getTypeImg())
                 .image(ImageUtility.decompressImage(db.getImage()))
+                .direction(db.getDirection())
                 .description(db.getDescription())
                 .title(db.getTitle())
                 .id(db.getId())

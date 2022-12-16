@@ -25,8 +25,7 @@ public class ReviewController {
     public Review getOne(@PathVariable(value = "id")long id) {
         return reviewService.getOne(id);
     }
-
-    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+    
     @PostMapping("/review")
     public void post(Review review) {
         reviewService.post(review);

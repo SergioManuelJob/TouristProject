@@ -25,18 +25,20 @@ export class UpdatePlacePageComponent {
   constructor(private placeService: PlaceService, private router: Router, private activatedRoute: ActivatedRoute){
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
     this.placeModel = {title: "", description: "", direction: "", image: ""}
-    this.fillPlace()
     this.place = new FormGroup({
       image: new FormControl('', Validators.required),
       title: new FormControl('', Validators.required),
       direction: new FormControl('', Validators.required),
       description: new FormControl('', [Validators.required]),
     });
+    this.fillPlace()
   }
 
   fillPlace(){
     this.placeService.getOnePlace(this.id).subscribe(data =>{  
       this.placeModel = data; 
+      console.log(data)
+      console.log(this.placeModel)
       this.direction = this.placeModel.direction
       this.title = this.placeModel.title
       this.description = this.placeModel.description
@@ -46,7 +48,13 @@ export class UpdatePlacePageComponent {
   }
 
   onSubmit(){
-
+    this.placeModel.direction = this.direction
+    this.placeModel.title = this.title
+    this.placeModel.description = this.description
+    this.placeModel.image = this.image
+    this.placeModel.typeImg! = this.typeImg
+    this.placeService.updatePlace(this.id, this.placeModel, this.dataImg)
+    window.location.href = "adminPlaces"
   }
 
   file(event: any) {
