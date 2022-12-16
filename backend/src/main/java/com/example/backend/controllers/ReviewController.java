@@ -25,7 +25,7 @@ public class ReviewController {
     public Review getOne(@PathVariable(value = "id")long id) {
         return reviewService.getOne(id);
     }
-    
+
     @PostMapping("/review")
     public void post(Review review) {
         reviewService.post(review);
