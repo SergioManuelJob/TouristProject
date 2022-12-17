@@ -7,7 +7,7 @@ import { Review } from '../Models/review';
 })
 export class ReviewService {
   
-  endpoint: string = "http://localhost:8080/review"
+  endpoint: string = "http://" + window.location.hostname + ":8080/review"
 
   constructor(private httpClient: HttpClient) { }
 

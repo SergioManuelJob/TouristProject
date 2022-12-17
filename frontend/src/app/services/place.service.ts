@@ -8,7 +8,7 @@ import Place from '../Models/place';
 })
 export class PlaceService {
 
-  endpoint: string = "http://localhost:8080/place"
+  endpoint: string = "http://" + window.location.hostname + ":8080/place"
 
   constructor(private httpClient: HttpClient) { }
 

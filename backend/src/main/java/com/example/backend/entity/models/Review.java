@@ -30,11 +30,10 @@ public class Review implements Serializable {
     @ManyToOne
     private Place placeId;
 
-    public Review(long id, String description, Date time, boolean like) {
+    public Review(long id, String description, boolean like) {
         super();
         this.id = id;
         this.description = description;
-        this.time = time;
         this.liked = like;
     }
 
@@ -52,14 +51,6 @@ public class Review implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Date getTime() {
-        return time;
-    }
-
-    public void setTime(Date time) {
-        this.time = time;
     }
 
     public boolean isLike() {
