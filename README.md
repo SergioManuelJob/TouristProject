@@ -123,56 +123,57 @@ Relational Diagram:
 
 ## User requirements
 
+
+
 #### Platform:
-- **P1**. This application comes as a website that you can use wherever you want.
-- **P2**. You can use it on mobile devices or tablets because it is a responsive application.
+- **P1**. This app was made for mobile phones, as the client wants this app for people to look places to go while on their mobile devices.
 
 #### Access:
-- **A1**. The app has a guest screen that can be accessed without being logged in.
-- **A2**. To make reservations you must be registered as a user, an administrator will check that everything is correct.
-- **A3**. As an administrator you can create, edit or delete data.
-  - **A3.1**. As an administrator you can create, update or delete an apartment.
-  - **A3.2**. As an administrator you can check all reservations of users.
-- **A4**. As a user you can edit your reservation.
-  - **A4.1**. As a user you can book an apartment and modify it if the start date does not match today's date.
-  - **A4.2**. As a user you can delete your reservation when it is finished.
+- **A1**. This app has a home screen where you can see the places and the reviews as a guest user, but nothing else.
+- **A2**. In order to write reviews you must be logged in, so that you can leave your opinion in a place.
+- **A3**. As an administrator you can create places, update them or delete them, as well as delete reviews, and users.
+  - **A3.1**. As an administrator you can create, update or delete any of the places on your admin page.
+  - **A3.2**. As an administrator you can also see all of the users.
+- **A4**. As a user you can edit your profile, or write reviews.
+  - **A4.1**. You can leave a positive review or negative review on any of the places.
 
 #### Interfaces:
 
-- **I1**. The application has two main interface where you can see all types of apartments.
-- **I2**. In the first main interface, you can navigate between help, login or apartment details and there is slider.
-  - **I2.1**. In the help interface, you will find cards with some places to go.
-    - **I2.1.1**. The first card you will find is the terms and privacy policy.
-    - **I2.1.2**. The second card you will fin is the application information.
-    - **I2.1.3**. The third card you will find is the additional information.
-    - **I2.1.4**. The fourth card you will find is the contact.
-  - **I2.2**. You will find a form and some actions in login interface.
-    - **I2.2.1**. You will be able to login to these interfaces by filling in the form with your account data.
-    - **I2.2.2**. You will be able to register if you do not have an account by clicking on a button.
-    - **I2.2.3**. You will be able to recover your password if you do not remember it.
-- **I3**. As a user you will be able to find more options than before.
-  - **I3.1**. In the help interface, you will find a card to delete your account.
-  - **I3.2**. You will be able to book an apartment.
-  - **I3.3**. You will be able to see all the reservations you have made.
-    - **I3.3.1**. You will be able to delete or edit your reservations depending on whether you have your reservation that day or not.
+- **I1**. The application has three main interfaces: the places sit, your profile and the admin page.
+- **I2**. In the first main interface, you can see a slider and places that the app is advertising, plus the log in icon to where you can go to register, look for help or login to access your private profile.
+  - **I2.1**. You can go to any of the places to look up their information.
+    - **I2.1.1**. You can see the description, location, title and image of the place you tapped on.
+    - **I2.1.2**. You can also see reviews of the same place.
+  - **I2.2**. You can log in by tapping the profile icon, or register going to another form.
+    - **I2.2.1**. You will be able to login and access the profile interface by putting in your credentials.
+    - **I2.2.2**. You will be able to register by tapping the register text and filling the form with your credentials.
+    - **I2.2.3**. Or you can look for help by tapping the help icon, accessing the help page.
+      - **I2.2.3.1**. In here you can see 3 cards: contact, information and user manual.
+        - **I2.2.3.1.1**. the contact card will send you to a form so you can communicate any problem.
+        - **I2.2.3.1.2**. the information about the app is displayed here.
+        - **I2.2.3.1.3**. the user manual should be here.
+- **I3**. As a user you will be able to do more actions.
+  - **I3.1**. You will be able to change your profile in the private area.
+  - **I3.2**. You will be able to see your reviews.
+  - **I3.3**. You will be able to write reviews on places.
   - **I3.4**. You will be able to log out.
-- **I4**. As a administrator, you will be able to see the second main interface.
-  - **I4.1**. You will be able to add new types of apartments.
-  - **I4.2**. You will be able to edit or delete existing apartment types.
-  - **I4.3**. You will be able to see all the reservations of all users.
-    -**I4.3.1**. You will be able to delete user reservations.
+- **I4**. As a administrator, you will be able to list the places and users of the whole app.
+  - **I4.1**. You will be able to delete any of the users, except yourself, the admin.
+  - **I4.2**. You will be able to create places.
+  - **I4.3**. You will be able to edit places.
+  - **I4.4**. You will be able to delete places.
+  - **I4.5**. You will be able to delete reviews in the places page.
+   
 
 #### Actions:
 
-- **A1**. User actions will be accompanied by comments and notifications when they are performed.
-- **A2**. When entering data in the form, it is validated that the information is entered correctly, notifying the user if there is an error.
+- **A1**. User actions will be accompanied by alerts or confirmation dialogs to give feedback as to what the user is doing.
+- **A2**. The forms are completely validated, you can't send any wrong data to the database, and in case you fail your credentials you will be warned about it.
 
 #### Validations:
 
-- **V1**. When typing or adding data, if an error occurs with respect to any character, you will be warned and the desired action will not be allowed.
-- **V2**. There are more than one type of validations, such as when you do not have the required credentials or the date is incorrect.
-  - **V2.1**. When you book an apartment, you cannot choose dates less than the current date at that time.
-- **V3**. When you enter your email address to log in or register, we will apply a mask to see if it is a valid email address.
+- **V1**. You can't type things or send wrong data due to validation, making it impossible for the user to mess up due to the form not sending until you write those inputs correctly.
+- **V2**. For the emails you can't write anything that's not a legal email, as it is controlled by a pattern.
 
 ---
 
@@ -281,6 +282,7 @@ Regarding accessibility, I tried to make it so the app could be used by a vast m
 - MySQL Workbench.
 - PostMan, for RESTFul tests.
 - Visual Studio Code or similar.
+- npm.
 
 #### Get started 
 
@@ -288,47 +290,40 @@ Regarding accessibility, I tried to make it so the app could be used by a vast m
 
 [![Angular][angular.io]][angular.url]
 
-To get started, create an empty folder on your computer and open your Visual Studio Code.
+To get this project, you only need to clone it in your computer. You can open your Visual Studio or similar, open a new terminal wherever you want to store it, and with git bash clone this project opening the terminal and putting this command:
 
-Once open, go to Files > Open Folder > and select the folder you just created.
-
-Now, open a terminal in the new folder.
-
-![newTerminal][newTerminal.img]
-
-Once you are in the terminal of your folder execute the following commands:
-
-* clone repository
+* clone this project:
     ```sh
-    git clone https://github.com/JordanJTY/hotelWeb_Angular-Spring
+    git clone https://github.com/SergioManuelJob/TouristProject.git
     ```
 
-Install all project's dependencies (Patience! It may take a few minutes):
+Then go to the frontend folder by using:
+
+* routing:
+    ```sh
+    cd frontend/
+    ```
  
-* npm
+ And install all of the project dependencies using npm:
+
+* npm command:
     ```sh
     npm install
     ```
 
-When dependencies have been installed, you can go to set up your backend.
+When all of this has been completed, you can configure the backend.
 
 ##### Backend
 
 [![Spring][spring.io]][spring.url]
 
-To get started, open the backend of the project with the IDE of your choice. In my case, I used IntelliJ.
+Go to MySQL workbench, and import the self contained file .sql from the database folder of this project, so you can get all the tables and the connection to the backend can be done correctly. (Do NOT erase anything from the roles table in the database, it is needed in the project.)
 
-![openedIDE][openedIDE.img]
+Open the backend folder with any IDE of your preference, and edit the application.properties file in the resources folder to match your database credentials.
 
-Once you have the backend open, go to MYSQL Workbench and check your username and password to access in your IDE. Also, take advantage of this opportunity to import a database where you save your data:
+![image](assets/applicationProperties.png)
 
-![createDB][createDB.img]
-
-Once these steps are done, you can start your backend without first configuring your application properties with your database name and MySQL password.
-
-![changeBackendConfiguration][changeBackendConfiguration.img]
-
-Remember start your frontend!
+With all of these done, you can start your backend with the IDE you have chosen. And once the server is running, start your frontend and enjoy the project.
 
 * Run your frontend
     ```sh
@@ -341,61 +336,62 @@ Remember start your frontend!
 
 ## Technology stack
 
-To carry out this project, I used a technology stack consisting of:
+The tecnology stack used for this project was:
 
-[![Angular][angular2.io]][angular.url] used as Frontend.
+[![Angular][angular2.io]][angular.url]  for the Frontend.
 
-[![Spring][spring2.io]][spring.url] with Hibernate and Java, used as Backend.
+[![Spring][spring2.io]][spring.url]  with Hibernate and Java, for the Backend.
 
 ---
 
 ## Technology comparison
 
-To compare technologies, I will choose those that I have had the opportunity to test or see from my peers. In this case I have chosen the following:
-
 Frontend: 
 
-[![React][react.io]][react.url] to compare with [![Angular][angular.io]][angular.url]
+React and Angular comparison:
 
-Both are constituted by the use of components, therefore, they are a good example to compare. However, while React uses JavaScript, Angular uses TypeScript. The difference between the two tools is that React is a JavaScript library and Angular is a framework designed for the frontend. With the basics clarified, let's list the differences:
+React and Angular are two of the most popular frontend right now, Angular is maintained by Google, while react is maintained by Facebook. Both have the same philosophy of working with components and making things reusable, but they are pretty different when working with them, because one is a whole framework, while the other is a library.
 
-  - React uses one-way data binding and virtual DOM, whereas Angular uses two-way data binding and real DOM.
+  - Angular brings more functions to the table, such as model, view and control separated, while react has a virtual DOM, a simpler interface and react native for mobile applications.
 
-  - React is faster than Angular as it has a smaller bundle size.
 
-  - React is mostly used to build interactive UI components with frequently variable data, whereas Angular.js is used to build complex enterprise apps like progressive web apps and single-page apps.
+  - The syntax is also different, where Angular is based completely in Typescript, and React uses JSX making it easier for the users.
 
-  - Angular JS is used to build single-page applications using HTML and TypeScript. React JS is commonly used to create user interfaces for single-page applications from isolated components.
+  - React as it is only a library is lighter than Angular, and is better in that case for smaller apps.
 
-  - Angular is a part of the MEAN stack and is very compatible with many code editors. It’s also considered to develop dynamic websites and web apps. On the other hand, React is widely used to develop reusable HTML elements for front end development.
+  - Angular for the frontend as it is a whole framework can work fine without the use of extensions most of the time, while React may need from the start many extensions in order to do many things, which is not a problem thanks to the communities they have both on their back developing things, but may be a problem for people who do not know of this extensions.
 
 Backend: 
 
-[![Sequelize][sequelize.io]][sequelize.url] to compare with [![Spring][spring.io]][spring.url]
+Node JS and Spring boot comparison:
 
 Both technologies are ORMs used for the connection between the backend and the frontend. Therefore, it seems appropriate to compare them. So, let's list the differences:
 
-  - Sequelize is a simpler development tool than Spring with respect to application development.
+Both of these are technologies used for backend programming, and while work with Java language and the other with Javascript mostly, both are really good.
 
-  - Spring and sequelize focus on creating a backend for frameworks such as frontends, having similar power in their uses. 
+  - Node JS can work on more than one task using one thread, thanks to asynchronous functions.
 
-  - Spring allows us to work with MVC frameworks with PHP, being the better of the two ORMs in this aspect.
+  - Spring can be easily executed, thanks to the annotations and dependencies behind, making the configuration much easier, as it is auto configurated. 
 
-  - Sequelize allows us to perform powerful works in Digital Drawing and Painting environments.
+  - Spring is multi thread, and this is great for really long operations or repetitive ones, as it uses a lot of threads silmutaneosly (this makes more use of your memory though).
+
+  - Creation of microservices is also easier in Spring boot thanks to new independent services.
 
 ---
 
 ## Planification
 
-To organize myself during the development of this project, I have established pending objectives to be done from the beginning, proposing to do them as I finished the ideation of the application.
+The planification of this project was done thanks to github projects and issues features, which I used to divide my tasks to do things more especifically rather that all at once, finishing things bit by bit.
 
-The first thing I did after establishing the idea of creating the website of a hotel, was to start developing the diagrams of the database and its relationships, as well as its attributes. Once decided, I created a project in GitHub that allowed me to keep a version control and, in turn, a control of the pending tasks I had. Once the tasks were set, create a mockup of the interfaces of my application, to have a reference as soon as I started to develop them with Angular. After finalizing the prototype, I prioritized the development of a stable and complete backend that would allow me to make a CRUD of all the tables and be able to "forget" about it once the frontend was ready.
-After the completion of the backend, along with its authentication and its respective tests with Postman, I proceeded with the frontend, taking as a reference my mockup made in Figma, but not before creating the corresponding services and models for a good connection to the database.
+I started this project as all people should, having an idea. This idea was later translated into the entities and tables, which were made into diagrams and attributes, to have a better idea of how the whole project would turn and what I should do to make it functional; once finished with the ideation of the app, I started designing it, doing a prototype in Figma to clear out my mind on how I would treat things in the backend to implement it correctly in the frontend.
 
-When I finished the project, I started to write the project documentation, including the different manuals for future users.
+Once all that process was done, I started by doing the backend, where I created all of the CRUDs, created a way to authenticate and have security, made roles so the diagrams I created could correspond with the project itself... Once I almost got all the backend sorted, I started doing the skeleton of the app, designing it completely but without any real functionality, just doing styles and components for when I could get the entities from the backend.
 
-You can see the control of pending tasks in the link of this project, navigating to the "project" section. However, I'll leave the link here for you to go from now on. 
- - [![ControlTasks][controlTasks.io]][controlTasks.url]
+Then I finished the backend almost completely, and started adding functionality to the frontend, making calls and doings requests of all sort, until I finally did it completely and finished the project.
+
+Once all of this was finished, I wrote this documentation you are seeing right now, and that was all of the work done.
+
+To view all of the tasks that I made myself in order to make this project, you can go to the projects section of this repository, where all the issues are, to know how I confronted this.
 
 ---
 
@@ -435,17 +431,3 @@ Sergio Manuel Suárez Suárez: https://github.com/SergioManuelJob
 [postman.url]: https://documenter.getpostman.com/view/23431388/2s8YzZNeDY
 [angularMaterial]: https://material.angular.io
 [ngxPermissions]: https://www.npmjs.com/package/ngx-permissions
-
-[angular2.io]: https://img.shields.io/badge/Angular-red?style=for-the-badge&logo=angular&logoColor=black
-[angular.io]: https://img.shields.io/badge/Frontend-Angular-red?style=flat-square&logo=angular&logoColor=red
-[angular.url]: https://angular.io
-
-[react.io]: https://img.shields.io/badge/Frontend-React-aqua?style=flat-square&logo=React&logoColor=aqua
-[react.url]: https://reactjs.org
-
-[spring2.io]: https://img.shields.io/badge/Spring-green?style=for-the-badge&logo=spring&logoColor=black
-[spring.io]: https://img.shields.io/badge/Backend-Spring-green?style=flat-square&logo=spring&logoColor=green
-[spring.url]: https://spring.io
-
-[sequelize.io]: https://img.shields.io/badge/Backend-Sequelize-blue?style=flat-square&logo=Sequelize&logoColor=blue
-[sequelize.url]: https://sequelize.org
