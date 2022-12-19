@@ -18,10 +18,13 @@
         <button routerLink="/adminPlaces">List Places</button>
         <button routerLink="/adminUsers">List Users</button>
     </div>
-    <div *ngxPermissionsOnly="['ROLE_USER']">
+    <div id="reviewsContainer" *ngxPermissionsOnly="['ROLE_USER']">
         <p>Reviews: </p>
 
-        <app-review-card score="0" place="Roque Nublo" date="22/07/11"></app-review-card>
-        <app-review-card score="1" place="Maspalomas" date="25/07/11"></app-review-card>
+        <div *ngFor="let r of reviews">
+            <div>
+                <app-review-card place="{{r.description}}" score="{{r.like}}" placeId="{{r.placeId.id}}" ></app-review-card>
+            </div>     
+        </div>
     </div>
 </div>

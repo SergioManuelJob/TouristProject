@@ -14,18 +14,18 @@ export class ReviewCommentComponent {
   @Input()
   score: String;
 
-  like: boolean;
+  dislike: boolean;
 
   constructor(){
     this.name = ""
     this.content = ""
     this.score = ""
-    this.like = false;
+    this.dislike = false;
   }
 
   ngOnInit(){
-    if(!(this.score == "0"))
-      this.like = true;
+    if(!(this.score == "true"))
+      this.dislike = true;
   }
 
 }

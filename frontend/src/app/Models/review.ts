@@ -1,8 +1,7 @@
 export interface Review {
-    id: number;
+    id?: number;
     description: string;
-    liked: number;
-    time: Date;
+    like: number;
     app_user_id: number;
     place_id: number;
 }

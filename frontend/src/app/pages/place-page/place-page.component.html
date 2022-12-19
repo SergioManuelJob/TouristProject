@@ -9,3 +9,21 @@
 
 <p id="Reviews">Reviews</p>
 <hr>
+
+<div id="containerForm" *ngxPermissionsOnly="['ROLE_USER']"> 
+    <form (ngSubmit)="onSubmit()" [formGroup]="review">
+        <textarea 
+            type="text"
+            placeholder="Write something!" 
+            formControlName="description"></textarea>
+            <label for="acceptTerms">Liked?</label>
+            <input type="checkbox" formControlName="liked" id="acceptTerms"/>
+        <button type="submit" [disabled]="review.invalid">Send</button>
+    </form>
+</div>
+
+<div *ngFor="let r of reviews">
+    <div>
+        <app-review-comment name="{{r.userId.username}}" content="{{r.description}}" score="{{r.like}}" ></app-review-comment>
+    </div>     
+</div>

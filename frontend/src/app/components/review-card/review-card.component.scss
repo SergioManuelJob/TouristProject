@@ -1,7 +1,9 @@
 #container{
     display: flex;
     margin-top: 1.5em;
-    width: 100%;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 10%;
     background-color: white;
     padding: 0.5em;
     border-radius: 0.5em;
@@ -9,6 +11,7 @@
 }
 
 img{
+    float: right;
     display: inline;
     width: 3em;
     height: 100%;

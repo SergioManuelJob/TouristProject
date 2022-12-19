@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-review-card',
@@ -8,24 +9,33 @@ import { Component, Input } from '@angular/core';
 export class ReviewCardComponent {
 
   @Input()
-  date: String;
-  @Input()
   place: String;
   @Input()
   score: String;
+  @Input()
+  placeId: String;
 
-  like: boolean;
+  dislike: boolean;
 
-  constructor(){
-    this.date = ""
+  constructor(private router: Router){
     this.place =""
     this.score = ""
-    this.like = false;
+    this.placeId = ""
+    this.dislike = false;
   }
 
   ngOnInit(){
-    if(!(this.score == "0"))
-      this.like = true;
+    if(!(this.score == "false"))
+      this.dislike = true;
+  }
+
+  go(){
+    console.log(this.placeId)
+    this.goToThisPlace(+this.placeId)
+  }
+
+  goToThisPlace(id: number) {
+    this.router.navigateByUrl(`place/${id}`);
   }
 
 }

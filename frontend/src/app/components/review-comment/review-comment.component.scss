@@ -15,12 +15,8 @@ img{
 #topPart{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0.5em;
-}
-
-#profilePic{
-    height: 100%;
-    width:4em;
 }
 
 h3{
@@ -32,11 +28,10 @@ p{
 }
 
 #like{
-    margin-left: 2em;
     background-color: #68FF92;
 }
 
 #dislike{
-    margin-left: 2em;
+    margin-left: 10em;
     background-color: #FC7979;
 }

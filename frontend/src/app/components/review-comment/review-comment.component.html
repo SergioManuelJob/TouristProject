@@ -1,8 +1,7 @@
 <div id="containerComment">
     <div id="topPart">
-        <img src="../../../assets/images/userUnlogged.png" id="profilePic">
         <h3>{{name}}</h3>
-        <div id="likeBlock" *ngIf="like else elseBlock" ><img id="like" src="../../../assets/images/like.png"></div>
+        <div id="likeBlock" *ngIf="dislike else elseBlock" ><img id="like" src="../../../assets/images/like.png"></div>
         <ng-template #elseBlock><img id="dislike" src="../../../assets/images/dislike.png"></ng-template>
     </div>
     <p>{{content}}</p>
