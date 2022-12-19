@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ReviewService } from 'src/app/services/review.service';
 
 @Component({
   selector: 'app-review-comment',
@@ -13,19 +14,27 @@ export class ReviewCommentComponent {
   content: String;
   @Input()
   score: String;
+  @Input()
+  id: String;
 
   dislike: boolean;
 
-  constructor(){
+  constructor(private reviewService: ReviewService){
     this.name = ""
     this.content = ""
     this.score = ""
+    this.id = ""
     this.dislike = false;
   }
 
   ngOnInit(){
     if(!(this.score == "true"))
       this.dislike = true;
+  }
+
+  delete(){
+    this.reviewService.deleteReview(+this.id)
+    window.location.reload()
   }
 
 }

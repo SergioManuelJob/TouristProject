@@ -38,7 +38,6 @@ export class LogInPageComponent {
     if (this.storage.getToken()) {
       this.isLoggedIn = true;
     }
-    console.log(this.storage.getToken())
   }
 
   onSubmit(): void {

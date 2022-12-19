@@ -35,7 +35,6 @@ export class PlacePageComponent {
     });
     this.reviewService.getAllReviews().subscribe(data =>{
       this.reviews = data;
-      console.log(this.reviews)
       this.checkReviews()
     })  
   }
@@ -57,7 +56,6 @@ export class PlacePageComponent {
     else{
       this.reviewModel.like = 1
     } 
-    console.log(this.reviewModel.like)
     this.reviewModel.place_id = this.id
     this.reviewModel.app_user_id = this.storage.getUser().id
     this.reviewService.createReview(this.reviewModel) 

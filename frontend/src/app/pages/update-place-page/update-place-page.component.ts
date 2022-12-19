@@ -37,8 +37,6 @@ export class UpdatePlacePageComponent {
   fillPlace(){
     this.placeService.getOnePlace(this.id).subscribe(data =>{  
       this.placeModel = data; 
-      console.log(data)
-      console.log(this.placeModel)
       this.direction = this.placeModel.direction
       this.title = this.placeModel.title
       this.description = this.placeModel.description

@@ -1,4 +1,5 @@
 <div id="containerComment">
+    <button id="delete" *ngxPermissionsOnly="['ROLE_ADMIN']" (click)="delete()">X</button>
     <div id="topPart">
         <h3>{{name}}</h3>
         <div id="likeBlock" *ngIf="dislike else elseBlock" ><img id="like" src="../../../assets/images/like.png"></div>

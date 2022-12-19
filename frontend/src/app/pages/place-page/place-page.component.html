@@ -24,6 +24,6 @@
 
 <div *ngFor="let r of reviews">
     <div>
-        <app-review-comment name="{{r.userId.username}}" content="{{r.description}}" score="{{r.like}}" ></app-review-comment>
+        <app-review-comment name="{{r.userId.username}}" content="{{r.description}}" score="{{r.like}}" id="{{r.id}}" ></app-review-comment>
     </div>     
 </div>

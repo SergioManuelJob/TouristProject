@@ -25,7 +25,6 @@ export class ProfilePageComponent implements OnInit {
     })
     this.reviewService.getAllReviews().subscribe(data =>{
       this.reviews = data;
-      console.log(this.reviews)
       this.checkReviews()
     })   
   }

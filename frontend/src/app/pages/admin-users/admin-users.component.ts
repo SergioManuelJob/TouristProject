@@ -21,7 +21,6 @@ export class AdminUsersComponent implements OnInit {
       this.users = data;
       for(let i = 0; i<this.users.length ; i++){
         if(this.users[i].email == this.storage.getUser().email){
-          console.log(this.users[i])
           this.users.splice(i, 1)
         }
       }

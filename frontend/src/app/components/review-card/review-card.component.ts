@@ -30,7 +30,7 @@ export class ReviewCardComponent {
   }
 
   go(){
-    console.log(this.placeId)
+
     this.goToThisPlace(+this.placeId)
   }
 
