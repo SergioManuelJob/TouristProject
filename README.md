@@ -431,3 +431,9 @@ Sergio Manuel Suárez Suárez: https://github.com/SergioManuelJob
 [postman.url]: https://documenter.getpostman.com/view/23431388/2s8YzZNeDY
 [angularMaterial]: https://material.angular.io
 [ngxPermissions]: https://www.npmjs.com/package/ngx-permissions
+
+[angular2.io]: https://img.shields.io/badge/Angular-red?style=for-the-badge&logo=angular&logoColor=black
+[angular.url]: https://angular.io
+
+[spring2.io]: https://img.shields.io/badge/Spring-green?style=for-the-badge&logo=spring&logoColor=black
+[spring.url]: https://spring.io
