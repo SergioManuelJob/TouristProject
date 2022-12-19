@@ -15,18 +15,18 @@ export class ReviewCardComponent {
   @Input()
   placeId: String;
 
-  dislike: boolean;
+  like: boolean;
 
   constructor(private router: Router){
     this.place =""
     this.score = ""
     this.placeId = ""
-    this.dislike = false;
+    this.like = false;
   }
 
   ngOnInit(){
-    if(!(this.score == "false"))
-      this.dislike = true;
+    if(!(this.score == "true"))
+      this.like = true;
   }
 
   go(){
