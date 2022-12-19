@@ -23,7 +23,7 @@
 
         <div *ngFor="let r of reviews">
             <div>
-                <app-review-card place="{{r.description}}" score="{{r.like}}" placeId="{{r.placeId.id}}" ></app-review-card>
+                <app-review-card place="{{r.placeId.title}}" score="{{r.like}}" placeId="{{r.placeId.id}}" ></app-review-card>
             </div>     
         </div>
     </div>
