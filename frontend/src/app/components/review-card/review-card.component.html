@@ -1,5 +1,5 @@
 <div id="container" (click)="go()">
     <p>{{place}}</p>
-    <div *ngIf="dislike else elseBlock" ><img id="like" src="../../../assets/images/like.png"></div>
+    <div *ngIf="like else elseBlock" ><img id="like" src="../../../assets/images/like.png"></div>
     <ng-template #elseBlock><img id="dislike" src="../../../assets/images/dislike.png"></ng-template>
 </div>
