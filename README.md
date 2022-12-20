@@ -352,8 +352,9 @@ React and Angular comparison:
 
 React and Angular are two of the most popular frontend right now, Angular is maintained by Google, while react is maintained by Facebook. Both have the same philosophy of working with components and making things reusable, but they are pretty different when working with them, because one is a whole framework, while the other is a library.
 
-  - Angular brings more functions to the table, such as model, view and control separated, while react has a virtual DOM, a simpler interface and react native for mobile applications.
+  - Angular as React is a web technology, which is great for making apps online as a web browser. This can be good for my project as you can access this app freely from anywhere, and as it doesn't really require anything from the plataform is used in, a native app wouldn't be suitable, an hybrid app though, can be a little bit more useful, but a web app for my purpose is still superior. Although, one thing that is better can be a PWA app, as it maintains data from your session and lets you see for example the places you saved in your cache, or your profile without access to the internet on the contrary to a full web app.
 
+  - Angular brings more functions to the table, such as model, view and control separated, while react has a virtual DOM, a simpler interface and react native for mobile applications.
 
   - The syntax is also different, where Angular is based completely in Typescript, and React uses JSX making it easier for the users.
 
