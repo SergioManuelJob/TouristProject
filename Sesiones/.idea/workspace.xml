@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3c12f0c9-9fcf-470a-ae07-537d45723c30" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/entity/service/impl/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/entity/service/impl/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/test/java/com/example/backend/BackendApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/Models/auth-guard.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/Models/auth-interceptor.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/Models/place.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/log-in-page/log-in-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/log-in-page/log-in-page.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/pages/place-page/place-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/pages/place-page/place-page.component.spec.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KQ0eAhRxmYBq7iwlL1OO5Q5M1E" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/AlumnadoTarde/Desktop/db4o-8.0.236.16058-nqopt-java5.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c12f0c9-9fcf-470a-ae07-537d45723c30" name="Changes" comment="" />
+      <created>1673891594206</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673891594206</updated>
+      <workItem from="1673891595644" duration="231000" />
+      <workItem from="1673892032912" duration="2975000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

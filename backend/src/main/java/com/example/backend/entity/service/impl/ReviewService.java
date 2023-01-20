@@ -24,7 +24,7 @@ public class ReviewService implements IReviewService {
 
     @Override
     public void post(Review review) {
-        reviewDao.save(review);
+      reviewDao.save(review);
     }
 
     @Override

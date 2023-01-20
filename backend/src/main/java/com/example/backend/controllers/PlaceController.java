@@ -3,7 +3,10 @@ package com.example.backend.controllers;
 import com.example.backend.entity.models.Place;
 import com.example.backend.entity.service.IPlaceService;
 import com.example.backend.tools.ImageUtility;
+import net.sf.jasperreports.repo.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -75,5 +78,10 @@ public class PlaceController {
     @DeleteMapping("/place/{id}")
     public void delete(@PathVariable(value = "id") long id) {
         placeService.delete(id);
+    }
+
+    @GetMapping("/place/exportInvoice")
+    public ResponseEntity<ByteArrayResource> exportInvoice(@RequestParam int idPlace){
+        return this.placeService.exportInvoice(idPlace);
     }
 }
