@@ -14,5 +14,10 @@ export class ReportServiceService {
     let headers = new HttpHeaders();
     headers = headers.set('Accept', 'application/pdf');
     return this.http.get(this.endpoint + "/exportInvoice", {responseType: 'blob', params: {idPlace: idPlace}})
+    .subscribe(response => {
+      const file = new Blob([response], { type: "application/pdf"});
+      const fileUrl = URL.createObjectURL(file);
+      window.open(fileUrl)
+    }, (error) => {console.log(error)})
   }
 }

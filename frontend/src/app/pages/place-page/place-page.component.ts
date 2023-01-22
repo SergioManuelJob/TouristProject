@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Review } from 'src/app/Models/review';
 import { PlaceService } from 'src/app/services/place.service';
+import { ReportServiceService } from 'src/app/services/report-service.service';
 import { ReviewService } from 'src/app/services/review.service';
 import { StorageService } from 'src/app/services/storage.service';
 
@@ -19,7 +20,7 @@ export class PlacePageComponent {
   review: FormGroup;
   reviewModel: Review;
 
-  constructor(private placeService: PlaceService, private router: Router, private activatedRoute: ActivatedRoute, private reviewService: ReviewService, private storage: StorageService){
+  constructor(private placeService: PlaceService, private reportService: ReportServiceService, private router: Router, private activatedRoute: ActivatedRoute, private reviewService: ReviewService, private storage: StorageService){
     this.reviews = []  
     this.reviewModel = {description: "", like: 0, app_user_id: 0, place_id: 0}
     this.review = new FormGroup({
@@ -63,6 +64,10 @@ export class PlacePageComponent {
     this.reviewService.createReview(this.reviewModel) 
     alert("Comment wrote succesfully")
     window.location.reload()
+  }
+
+  getReport(){
+    this.reportService.getPlaceReport(this.id);
   }
 
   

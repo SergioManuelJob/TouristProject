@@ -16,6 +16,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.sql.SQLOutput;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -59,15 +61,15 @@ public class PlaceService implements IPlaceService {
                 final JasperReport report = (JasperReport) JRLoader.loadObject(file);
 
                 final HashMap<String, Object> parameters = new HashMap<>();
-                parameters.put("Logo", logo);
+                parameters.put("Logo", new FileInputStream(logo));
                 parameters.put("listPlaces", new JRBeanCollectionDataSource((Collection<?>) this.placeDao.findById(idPlace)));
                 JasperPrint jasperPrint = JasperFillManager.fillReport(report, parameters, new JREmptyDataSource());
                 byte[] reporte = JasperExportManager.exportReportToPdf(jasperPrint);
                 String sdf = new SimpleDateFormat("dd/MM/YYYY").format(new Date());
-                StringBuilder stringBuilder = new StringBuilder().append("ReservationPDF:");
+                StringBuilder stringBuilder = new StringBuilder().append("PlacePDF:");
                 ContentDisposition contentDisposition = ContentDisposition.builder("attachment")
-                        .filename(stringBuilder.append(1)
-                                .append("generateDate:")
+                        .filename(stringBuilder.append(Math.random()*1000)
+                                .append("generationDate:")
                                 .append(sdf)
                                 .append(".pdf")
                                 .toString())

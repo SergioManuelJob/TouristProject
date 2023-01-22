@@ -72,8 +72,8 @@ public class Place implements Serializable {
         this.image = image;
     }
 
-    public List<Review> getReviews() {
-        return reviews;
+    public int getReviews() {
+        return reviews.size();
     }
 
     public void setReviews(List<Review> reviews) {

@@ -1,11 +1,21 @@
 <app-nav-bar></app-nav-bar>
 
+
 <div id="containerDetails">
+
+    
+
     <h2>{{place.title}}</h2>
     <img src="{{'data:{{place.typeImg}};base64,' + place.image}}">
     <p>{{place.direction}}</p>
     <p>{{place.description}}</p>
 </div>
+
+<div id="containerReport">
+    <button id="reportButton" *ngxPermissionsOnly="['ROLE_ADMIN']" (click)="getReport()">View report</button>
+</div>
+
+
 
 <p id="Reviews">Reviews</p>
 <hr>
